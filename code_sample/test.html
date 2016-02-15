@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+  <meta charset=utf-8>
+  <style>
+    .peg_box div, .hole_box div {height: 100px; width: 100px; float: left;}
+    .hole_box > div {border: 1px solid black; padding: 1px; margin: 5px; background: transparent;}
+    .peg_box {height: 120px;}
+    .peg_box div {margin: 10px;}
+    .circle {border-radius: 50px;}
+    div .rect {width: 50px;}
+    .circle {background: red;}
+    .square {background: blue;}
+    .rect {background: yellow;}
+    
+  </style>
+  <script>
+    function afterLoad(){
+      var pegs = document.querySelectorAll('.peg_box div');
+      [].forEach.call(pegs, function(peg) {
+        peg.addEventListener('dragstart', startDrag, false);
+      });
+      
+      var holes = document.querySelectorAll('.hole_box div');
+      [].forEach.call(holes, function(hole) {        
+        hole.addEventListener('dragenter', isDroppable, false);
+        hole.addEventListener('dragover', function(e){e.preventDefault();}, false);
+        hole.addEventListener('drop', dropped, false);
+      });
+    };
+    
+    function startDrag(e) {
+      var html = e.target.outerHTML;
+      pegName = e.target.classList[0];
+      e.dataTransfer.effectAllowed = "move";
+      e.dataTransfer.setData('text/plain', html);
+    }
+    
+    function isDroppable(e) {
+      e.preventDefault();
+      if (e.target.classList[0] === pegName) {
+        isMatch = true;
+      } else {
+        isMatch = false;
+      };
+    }
+    
+    function dropped(e) {
+      e.preventDefault();
+      if (isMatch === true) {
+        e.target.innerHTML = e.dataTransfer.getData('text/plain');
+        var dropped = document.querySelector('.' + pegName);
+        document.querySelector('.peg_box').removeChild(dropped);
+      }
+    }
+    
+    window.addEventListener('load', afterLoad, false)
+  </script>
+</head>
+<body>
+  <div class="peg_box group">
+    <div class="circle" draggable="true"></div>
+    <div class="square" draggable="true"></div>
+    <div class="rect" draggable="true"></div>
+  </div>
+  <div class="hole_box group">
+    <div class="rect"></div>
+    <div class="circle"></div>
+    <div class="square"></div>
+  </div>
+</body>
+</html>

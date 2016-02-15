@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>Jack T. Andrew</title>
+  <meta name="description" content="A compilation of Jack's development work">
+  <meta name="viewport" content="width=680">
+
+  <script src="scripts/libraries/jquery-1.7.1.min.js"></script>
+  <script src="scripts/libraries/jquery-ui-1.9.0.custom.min.js"></script>
+  <script src="scripts/libraries/jquery-css-transform.js"></script>
+  <script src="scripts/libraries/jquery-animate-css-rotate-scale.js"></script>
+
+  <script src="scripts/libraries/modernizr.custom.js"></script>
+  <script src="scripts/libraries/jquery.lightbox-0.5.min.js"></script>
+  <script src="scripts/libraries/waypoints.min.js"></script>
+  <script src="scripts/libraries/knockout.js"></script>
+  <script src="scripts/libraries/underscore.js"></script>
+  <script src="scripts/libraries/backbone.js"></script>
+  <script src="scripts/libraries/jStorage.js"></script>
+  <script src="scripts/libraries/simple-inheritance.js"></script>
+  <script src="scripts/libraries/jquery.zclip.min.js"></script>
+  <script src="scripts/libraries/coffee-script.js"></script>
+
+  <script src="scripts/threes.js"></script>
+  <script src="scripts/tri.ko.js"></script>
+  <script src="scripts/dominos.js"></script>
+  <script src="scripts/portfolio.js"></script>
+
+  <link rel="stylesheet" href="stylesheets/style.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="stylesheets/jquery.lightbox-0.5.css" type="text/css" media="screen" />
+
+  <script>
+
+  // Select all links that contains lightbox in the attribute rel
+  $(function() {
+    $('a[rel*=lightbox]').lightBox({
+      fixedNavigation:true,
+    	overlayBgColor: '#FFF',
+    	overlayOpacity: 0.6,
+    	imageLoading: 'images/loading.gif',
+    	imageBtnClose: 'images/close.gif',
+    	imageBtnPrev: 'images/prev.gif',
+    	imageBtnNext: 'images/next.gif',
+    	containerResizeSpeed: 350,
+    	txtImage: 'Image',
+    	txtOf: 'of'
+    });
+  });
+  </script>
+
+</head>
+<body>
+
+<div id="wrapper">
+  <hgroup>
+    <h1>Jack T. Andrew</h1>
+  </hgroup>
+
+  <div id="main-nav-holder">
+    <nav id="main-nav">
+      <ul>
+        <li><a href="#work">portfolio</a></li>
+        <li><a href="#photos">photos</a></li>
+        <li><a href="#code">code</a></li>
+        <li><a href="#game">game</a></li>
+        <li><a href="#tool">tool</a></li>
+        <li><a href="#contact">contact</a></li>
+        <li><a href="#resume">resume</a></li>
+      </ul>
+    </nav>
+  </div>
+
+
+  <section id="work">
+    <h1>Web Development</h1>
+    <div class="squares">
+      <div>
+        <img src="images/p4.png" />
+        <p class="caption">
+          Built inside WordPress for give the site manager a familiar and user friendly CMS.
+          <a target="_blank" href="http://fremontabbey.org/">Visit the Site</a>
+        </p>
+      </div>
+      <div>
+        <img src="images/p3.png" />
+        <p class="caption">
+          A simple business card site I design and built using Ruby on Rails to handle the backend and Heroku for hosting.
+          <a target="_blank" href="http://glra.heroku.com/">Visit the Site</a>
+        </p>
+      </div>
+
+      <div>
+        <img src="images/p7.png" />
+        <p class="caption">
+          A page I both designed and built that incorporating an interactive Google Map.
+          <a target="_blank" href="locations.html">Visit the Site</a>
+        </p>
+      </div>
+
+      <div>
+        <img src="images/p6.png" />
+        <p class="caption">
+          A page I both designed and built that incorporating an interactive Google Map.
+          <a target="_blank" href="suppliers.html">Visit the Site</a>
+        </p>
+      </div>
+
+      <!--<div>-->
+      <!--  <img src="images/p10.jpg" />-->
+      <!--  <p class="caption">-->
+      <!--    I created all the HTML and CSS for the front page, making a exact replication of a Photoshop file a designer created.  After the initial build the client requested many attention grabbing sliders and carousel and other ploys to grab the viewers attention. This site gave me a great deal of experience with different jQuery Plugins.-->
+      <!--    <a target="_blank" href="http://www.plg-pllc.com/">Visit the Site</a>-->
+      <!--  </p>-->
+      <!--</div>-->
+    </div> <!-- end .squares -->
+  </section> <!-- end #work -->
+
+  <section id="photos">
+    <h1>Travel Photos</h1>
+    <div id="africa" class="squares">
+      <div>
+        <a href="images/a1_full.jpg" rel="lightbox"><img src="images/a1.png" /></a>
+        A
+      </div>
+
+      <div>
+        <a href="images/a2_full.jpg" rel="lightbox"><img src="images/a2.png" /></a>
+        F
+      </div>
+
+      <div>
+        <a href="images/a5_full.jpg" rel="lightbox"><img src="images/a5.png" /></a>
+        R
+      </div>
+
+      <div>
+        <a href="images/a3_full.jpg" rel="lightbox"><img src="images/a3.png" /></a>
+        I
+      </div>
+
+      <div>
+        <a href="images/a6_full.jpg" rel="lightbox"><img src="images/a6.png" /></a>
+        C
+      </div>
+
+      <div>
+        <a href="images/a4_full.jpg" rel="lightbox"><img src="images/a4.png" /></a>
+        A
+      </div>
+    </div>
+
+    <div id="haiti" class="squares">
+      <div>
+        <a href="images/h1_full.jpg" rel="lightbox"><img src="images/h1.png" /></a>
+        H
+      </div>
+
+      <div>
+        <a href="images/h2_full.jpg" rel="lightbox"><img src="images/h2.png" /></a>
+        A
+      </div>
+
+      <div>
+        <a href="images/h3_full.jpg" rel="lightbox"><img src="images/h3.png" /></a>
+        I
+      </div>
+
+      <div>
+        <a href="images/h4_full.jpg" rel="lightbox"><img src="images/h4.png" /></a>
+        T
+      </div>
+
+      <div>
+        <a href="images/h5_full.jpg" rel="lightbox"><img src="images/h5.png" /></a>
+        I
+      </div>
+
+      <div class="text-square">
+        <div></div>
+        <p>
+          I first went to Haiti alone. I found out about a mission, contacted the director, and then just went. I was definitely a little reckless that first trip. I hitch-hiked from Santiago, DR to the border, crossed on foot, and then took public transport into the capitol. I got spooked when I saw the UN soldiers sitting in tanks, wearing body armor, with assault rifles slung over their shoulders. Meanwhile I couldn't speak the language, didn't know my way around, and was carrying around everything I owned. In the fear on my face the bus driver saw opportunity. I had previous said no to his offer of a $7 fee for him to go off his route and drive me to my hotel, this time when repeated the offer for $10, I jumped at the chance.
+        </p>
+      </div>
+    </div>
+
+    <div id="peaks" class="squares">
+      <div>
+        <a href="images/w1_full.jpg" rel="lightbox"><img src="images/w1.png" /></a>
+        P
+      </div>
+
+      <div>
+        <a href="images/w2_full.jpg" rel="lightbox"><img src="images/w2.png" /></a>
+        E
+      </div>
+
+      <div>
+        <a href="images/w3_full.jpg" rel="lightbox"><img src="images/w3.png" /></a>
+        A
+      </div>
+
+      <div>
+        <a href="images/w4_full.jpg" rel="lightbox"><img src="images/w4.png" /></a>
+        K
+      </div>
+
+      <div>
+        <a href="images/w6_full.jpg" rel="lightbox"><img src="images/w6.png" /></a>
+        S
+      </div>
+
+      <div class="text-square">
+        <div></div>
+        <p>
+          Growing up I could see Mt. Rainier form my town. The icy summit looming above the clouds always filled me with awe and wonder. I dreamed about one day reaching the top but didn't know even where to begin. In 2002 I joined a church climbing group. At the time I was new to climbing with no real experience and no equipment. The group lead me up a couple mountains in the spring for preparation and by summer I was ready to join in the attempt on Mt. Rainer. I rented all my personal gear from REI and depended on my teammates to share their stove and tent. Although it was the toughest thing I had ever done I made it to the top and more importantly, I made it home safe.
+        </p>
+      </div>
+    </div>
+
+    <div id="bikes" class="squares">
+
+      <div class="text-square">
+        <div></div>
+        <img src="images/b6.png" />
+      </div>
+
+      <div>
+        <a href="images/b1_full.jpg" rel="lightbox"><img src="images/b1.jpg" /></a>
+        B
+      </div>
+
+      <div>
+        <a href="images/b2_full.jpg" rel="lightbox"><img src="images/b2.jpg" /></a>
+        I
+      </div>
+
+      <div>
+        <a href="images/b3_full.jpg" rel="lightbox"><img src="images/b3.jpg" /></a>
+        K
+      </div>
+
+      <div>
+        <a href="images/b4_full.jpg" rel="lightbox"><img src="images/b4.jpg" /></a>
+        E
+      </div>
+
+      <div>
+        <a href="images/b5_full.jpg" rel="lightbox"><img src="images/b5.jpg" /></a>
+        S
+      </div>
+    </div>
+  </section>  <!-- end #photos -->
+
+  <section id="code">
+    <h1>Code</h1>
+    <div class="squares">
+<!--
+      <div>
+
+        <img src="images/dominos.png" />
+        <h2>CoffeeScript &amp; jQuery UI</h2>
+        <p class="caption">
+          This program is written in CoffeeScript and jQuery UI and creates dominoes and allows you to drag and drop them onto the board.
+          <a href="code_sample/dominos.html" target="_blank">See the example and code</a>
+        </p>
+      </div>
+-->
+      <div>
+        <h2>HTML5</h2>
+        <img src="images/html5summary.png">
+        <p class="caption">
+          Examples of the latest features added to the HTML specifications including the canvas, audio, and video tags
+          <a href="code_sample/html5summary.html" target="_blank">See the examples and code</a>
+        </p>
+      </div>
+
+      <div>
+        <h2>CSS3</h2>
+        <img src="images/css3highlights.jpg">
+        <p class="caption">
+          A few highlights of the latest features added to the CSS3 specifications including the text-shadows, transitions, and border effects.
+          <a href="code_sample/css3highlights.html" target="_blank">See the examples and code</a>
+        </p>
+      </div>
+
+    </div>
+  </section> <!--  end #code -->
+
+  <section id="game">
+    <div class="threes group">
+      <h1>Games</h1>
+      <h1>Threes or Tripes</h1>
+      <h5>Threes is a simple game of chance.  The rule are as follows:</h5>
+      <ul id="threes_rules">
+        <li>A three is worth zero point</li>
+        <li>All other dice are the value on their face</li>
+        <li>The object is to have the lowest score</li>
+        <li>You start by rolling 5 dice</li>
+        <li>Each turn select 1 or more to keep</li>
+        <li>Match your opponent's bet, raise him, or fold</li>
+        <li>End your turn and let your opponent have a go</li>
+      </ul>
+      <br/>
+      <div id="left_col" class="red">
+        <h4>Username</h4>
+        <div class="cash_box">
+          <h5>Purse</h5>
+          <div class="purse"></div>
+          <a href="#" class="ten_piece">10</a>
+          <a href="#" class="five_piece">5</a>
+          <a href="#" class="one_piece">1</a>
+          <h5>Bet</h5>
+          <div class="bet"></div>
+        </div>
+
+        <div class="stats">
+          <h5>Score</h5>
+          <div class="score">0</div>
+          <h5>Keepers</h5>
+          <div class="keepers"></div>
+        </div>
+      </div>
+
+      <div id="outer">
+        <button id="roll" class="unavailable">Roll</button>
+        <button id="fold">Fold</button>
+        <button id="sure_fold">Are you sure you want to fold?</button>
+        <button id="rematch">Rematch</button>
+        <form>
+          <h4>Your Name</h4>
+          <input type="text" class="uname" value="Your Name"
+            onfocus="if(this.value == 'Your Name') { this.value = ''; }"
+            onblur="if(this.value == '') { this.value = 'Your Name'; }"/>
+        </form>
+        <div id="inner"></div>
+        <h1></h1>
+        <h2>It was a TIE!</h2>
+        <h5>The the pot will go to the winner of next round</h5>
+        <h3>and took home <span></span> in winnings</h3>
+        <button id="start">Start</button>
+        <button id="end_turn" class="unavailable">End Turn</button>
+        <button id="reset_scores" class="half_button">Reset Scores</button>
+        <button id="new_player" class="half_button">New Player</button>
+      </div>
+
+      <div id="right_col" class="red">
+        <h4>Username</h4>
+        <div class="stats">
+          <h5>Score</h5>
+          <div class="score">0</div>
+          <h5>Keepers</h5>
+          <div class="keepers"></div>
+        </div>
+
+        <div class="cash_box">
+          <h5>Purse</h5>
+          <div class="purse"></div>
+          <a href="#" class="ten_piece">10</a>
+          <a href="#" class="five_piece">5</a>
+          <a href="#" class="one_piece">1</a>
+          <h5>Bet</h5>
+          <div class="bet"></div>
+        </div>
+      </div>
+    </div>  <!-- end .threes -->
+  </section>  <!-- end #game -->
+
+  <section id="tool">
+    <h1>Tool</h1>
+    <h2>Pure CSS Triangle Builder</h2>
+    <div id="tri_maker" class="group">
+        <ul data-bind="foreach: optionValues">
+          <li class="box">
+            <input type="radio" name="triTypes" data-bind="attr: {value: $data}, checked: $root.radioOption" />
+            <div data-bind="attr: {class: $data}"></div>
+          </li>
+        </ul>
+      <h4>Triangle<input type="checkbox" data-link="triangle" data-bind='checked: triangleBoole'></h4>
+      <div class="triangle">
+        Height: <input type="number" data-bind='value: triHeight, valueUpdate: "afterkeydown"' />
+        Width:  <input type="number" data-bind='value: triWidth, valueUpdate: "afterkeydown"' />
+        Color:  <input type="text" data-bind='value: triColor, valueUpdate: "afterkeydown"' />
+      </div>
+
+      <h4>Shadow<input type="checkbox" class="shadow_check" data-link="shadow" data-bind='checked: shadowBoole'></h4>
+      <div class="shadow">
+        Y Offset:  <input type="number" data-bind='value: shadowY, valueUpdate: "afterkeydown"' />
+        X Offset: <input type="number" data-bind='value: shadowX, valueUpdate: "afterkeydown"' />
+        Blur:  <input type="number" data-bind='value: shadowB, valueUpdate: "afterkeydown"' />
+        Color:  <input type="text" data-bind='value: shadowC, valueUpdate: "afterkeydown"' />
+      </div>
+
+      <h4>Border<input type="checkbox" class="border_check" data-link="border" data-bind='checked: borderBoole'></h4>
+      <div class="border">
+        Y Offset: <input type="number" data-bind='value: borderY, valueUpdate: "afterkeydown"' />
+        X Offset: <input type="number" data-bind='value: borderX, valueUpdate: "afterkeydown"' />
+        Width: <input type="number" data-bind='value: borderW, valueUpdate: "afterkeydown"' />
+        Color: <input type="text" data-bind='value: borderC, valueUpdate: "afterkeydown"' />
+      </div>
+
+      <h4>Rotation<input type="checkbox" class="rotation_check" data-link="rotation" data-bind='checked: rotationBoole'></h4>
+      <div class="rotation">
+        Degree: <input type="number" data-bind='value: degree, valueUpdate: "afterkeydown"' />
+      </div>
+
+
+      <div id="visual">
+        <div class="border" data-bind="style: {borderColor: colorOfBorder, borderWidth: widthOfBorder, webkitFilter: borderShadowCode, margin: marginOfBorder, webkitTransform: degreeOfRotate}"></div>
+        <div class="triangle" data-bind="style: {borderColor: triangleColor, borderWidth: triangleWidth, webkitFilter: triangleShadowCode, webkitTransform: degreeOfRotate}"></div>
+      </div>
+      <div class="code">
+        <!-- <a class="copy">Copy</a> -->
+        <ol>
+          <li class="border">&lt;div class="border <span class="shadow">shadow</span> <span class="rotation">rotation</span>"&gt;&lt;/div&gt;</li>
+          <li class="triangle">&lt;div class="triangle <span class="shadow">shadow</span> <span class="rotation">rotation</span>"&gt;&lt;/div&gt;</li>
+          <li></li>
+        </ol>
+      </div>  <!-- end div.code -->
+
+      <div class="code">
+        <!-- <a class="copy">Copy</a> -->
+        <ol>
+          <div class="triangle">
+            <li>.triangle {</li><div class="indent">
+              <li><label>height: </label><span>0</span>;</li>
+              <li><label>width: </label><span>0</span>;</li>
+              <li><label>border-style: </label><span>solid</span>;</li>
+              <li><label>border-width: </label><span data-bind='text: triangleWidth'></span>;</li>
+              <li><label>border-color: </label><span data-bind='text: triangleColor'></span>;</li></div> <!-- end .indent -->
+            <li>}</li></div> <!-- end div.triangle -->
+          <div class="shadow">
+            <li>.shadow {</li><div class="indent">
+              <li><label>-webkit-filter: drop-shadow(</label><span data-bind='text: shadowX'></span>px <span data-bind='text: shadowY'></span>px <span data-bind='text: shadowB'></span>px <span data-bind='text: shadowC'></span>);</li>
+              <li><label>-moz-filter: drop-shadow(</label><span data-bind='text: shadowX'></span>px <span data-bind='text: shadowY'></span>px <span data-bind='text: shadowB'></span>px <span data-bind='text: shadowC'></span>);</li>
+              <li><label>-o-filter: drop-shadow(</label><span data-bind='text: shadowX'></span>px <span data-bind='text: shadowY'></span>px <span data-bind='text: shadowB'></span>px <span data-bind='text: shadowC'></span>);</li>
+              <li><label>-filter: drop-shadow(</label><span data-bind='text: shadowX'></span>px <span data-bind='text: shadowY'></span>px <span data-bind='text: shadowB'></span>px <span data-bind='text: shadowC'></span>);</li></div> <!-- end .indent -->
+            <li>}</li></div> <!-- end div.shadow -->
+          <div class="border">
+            <li>.border {</li><div class="indent">
+              <li><label>position: </label><span>absolute</span>;</li>
+              <li><label>top: </label><span>0</span>;</li>
+              <li><label>left: </label><span>0</span>;</li>
+              <li><label>height: </label><span>0</span>;</li>
+              <li><label>width: </label><span>0</span>;</li>
+              <li><label>border-style: </label><span>solid</span>;</li>
+              <li><label>border-width: </label><span data-bind='text: widthOfBorder'></span>;</li>
+              <li><label>border-color: </label><span data-bind='text: colorOfBorder'></span>;</li>
+              <li><label>margin: </label><span data-bind='text: marginOfBorder'></span>;</li></div> <!-- end .indent -->
+            <li>}</li></div> <!-- end div.border -->
+          <div class="rotation">
+            <li>.rotation {</li><div class="indent">
+              <li><label>-webkit-transform: </label><span data-bind='text: degreeOfRotate'></span>;</li>
+              <li><label>-moz-transform: </label><span data-bind='text: degreeOfRotate'></span>;</li>
+              <li><label>-ms-transform: </label><span data-bind='text: degreeOfRotate'></span>;</li>
+              <li><label>-o-transform: </label><span data-bind='text: degreeOfRotate'></span>;</li>
+              <li><label>transform: </label><span data-bind='text: degreeOfRotate'></span>;</li></div> <!-- end .indent -->
+            <li>}</li></div> <!-- end div.rotation -->
+              <li></li></ol></div>  <!-- end div#code -->
+    </div>  <!-- end #tri_maker -->
+  </section>
+
+  <section id="contact">
+    <h1>Contact</h1>
+    <ul>
+      <li>Email: <a href="mailTo:JackTAndrew@gmail.com">JackTAndrew@gmail.com</a></li>
+      <li>Skype: <a href="skype:jacktandrew?chat">jacktandrew</a></li>
+      <li>GitHub: <a href="https://github.com/jacktandrew">https://github.com/jacktandrew</a></li>
+    </ul>
+  </section>  <!-- end contact -->
+
+  <section id="resume">
+    <h1>Jack T. Andrew</h1>
+    <a href="Jack_T_Andrew_Resume.doc" class="download">Download as Word Document</a>
+    <h3>Work Experience</h3>
+
+    <h4>Design Technologist</h4>
+    <h5>
+      <span>Amazon</span>
+      <span>Seattle, WA</span>
+      <span>Nov. 2013 - Present</span>
+    </h5>
+    <ul>
+      <li>Built Kindle landing page templates and campaigns</li>
+      <li>Made custom desktop landing page for the retail website</li>
+      <li>Wrote a suite of command line scripts and simple app to increase efficiency</li>
+      <li>Built a custom PhotoShop panel to automate steps in asset creation</li>
+    </ul>
+
+    <h4>Front End Developer</h4>
+    <h5>
+      <span>OneOcean</span>
+      <span>Seattle, WA</span>
+      <span>Mar. 2012 - Aug. 2012</span>
+    </h5>
+    <ul>
+      <li>Wrote Jasmine JS Unit Tests for an Angular JS web applications</li>
+    </ul>
+
+    <h4>Design/Developer</h4>
+    <h5>
+      <span>Xbox</span>
+      <span>Redmond, WA</span>
+      <span>Dec. 2012 - Mar. 2012</span>
+    </h5>
+    <ul>
+      <li>Updated the CSS and HTML of web and Xbox applications</li>
+    </ul>
+
+    <h4>Freelance Developer / Designer</h4>
+    <h5>
+      <span>Jack T. Andrew Freelance</span>
+      <span>Seattle, WA</span>
+      <span>May 2011 - Oct. 2012</span>
+    </h5>
+    <ul>
+      <li>Wrote code in HTML5, CSS3, and jQuery to make custom sites inside WordPress</li>
+    </ul>
+
+    <h3>Education</h3>
+    <h5>Bachelors of Arts and Science in Classical Studies</h5>
+    <h5>
+      <span>University of Washington</span>
+      <span>Seattle, WA</span>
+      <span>Jan. 2002 - Jun. 2003</span>
+    </h5>
+
+    <h3>Skills</h3>
+    <ul id="skills">
+      <li>Four years of experience HTML5, CSS3 and JavaScript</li>
+      <li>Four years of using libraries including jQuery, Underscore, and Backbone</li>
+      <li>Two year of experience with Ruby</li>
+    </ul>
+  </div>
+
+  <footer>
+    <nav>
+      <ul>
+        <li><a class="top"  title="Back to top">Top</a></li>
+        <li><a class="down" title="Scroll down">Down</a></li>
+      </ul>
+    </nav>
+  </footer>
+</section>  <!-- end #resume -->
+</body>
+</html>

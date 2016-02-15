@@ -1,0 +1,309 @@
+<h1>Colors - HSLa</h1>
+<div class="color_wrapper">
+  <div class="color_swatch opacity">
+    <div>
+      <pre>.opacity_10 {
+background: hsla(255, 100%, 100%, 0.1);
+color: hsla(255, 100%, 100%, 0.1);
+    }</pre>
+    </div>
+    <div>
+      <pre>.opacity_20 {
+background: hsla(255, 100%, 100%, 0.2);
+color: hsla(255, 100%, 100%, 0.2);
+    }</pre>
+    </div>
+    <div>
+      <pre>.opacity_30 {
+background: hsla(255, 100%, 100%, 0.3);
+color: hsla(255, 100%, 100%, 0.3);
+    }</pre>
+    </div>
+    <div>
+      <pre>.opacity_40 {
+background: hsla(255, 100%, 100%, 0.4);
+color: hsla(255, 100%, 100%, 0.4);
+    }</pre>
+    </div>
+    <div>
+      <pre>.opacity_50 {
+background: hsla(255, 100%, 100%, 0.5);
+color: hsla(255, 100%, 100%, 0.5);
+    }</pre>
+    </div>
+    <div>
+      <pre>.opacity_60 {
+background: hsla(255, 100%, 100%, 0.6);
+color: hsla(255, 100%, 100%, 0.6);
+    }</pre>
+    </div>
+    <div>
+      <pre>.opacity_70 {
+background: hsla(255, 100%, 100%, 0.7);
+color: hsla(255, 100%, 100%, 0.7);
+    }</pre>
+    </div>
+    <div>
+      <pre>.opacity_80 {
+background: hsla(255, 100%, 100%, 0.8);
+color: hsla(255, 100%, 100%, 0.8);
+    }</pre>
+    </div>
+    <div>
+      <pre>.opacity_90 {
+background: hsla(255, 100%, 100%, 0.9);
+color: hsla(255, 100%, 100%, 0.9);
+    }</pre>
+    </div>
+    <div>
+      <pre>.opacity_100 {
+background: hsla(255, 100%, 100%, 1);
+color: hsla(255, 100%, 100%, 1);
+    }</pre>
+    </div>
+  </div>
+</div>
+
+<div class="color_wrapper">
+  <div class="color_swatch saturation">
+    <div>
+      <pre>.saturation_10 {
+background: hsla(255, 10%, 100%, 1);
+color: hsla(100, 10%, 100%, 1);
+    }</pre>
+    </div>
+    <div>
+      <pre>.saturation_20 {
+background: hsla(255, 20%, 100%, 1);
+color: hsla(100, 20%, 100%, 1);
+    }</pre>
+    </div>
+    <div>
+      <pre>.saturation_30 {
+background: hsla(255, 30%, 100%, 1);
+color: hsla(100, 30%, 100%, 1);
+    }</pre>
+    </div>
+    <div>
+      <pre>.saturation_40 {
+background: hsla(255, 40%, 100%, 1);
+color: hsla(100, 40%, 100%, 1);
+    }</pre>
+    </div>
+    <div>
+      <pre>.saturation_50 {
+background: hsla(255, 50%, 100%, 1);
+color: hsla(100, 50%, 100%, 1);
+    }</pre>
+    </div>
+    <div>
+      <pre>.saturation_60 {
+background: hsla(255, 60%, 100%, 1);
+color: hsla(100, 60%, 100%, 1);
+    }</pre>
+    </div>
+    <div>
+      <pre>.saturation_70 {
+background: hsla(255, 70%, 100%, 1);
+color: hsla(100, 70%, 100%, 1);
+    }</pre>
+    </div>
+    <div>
+      <pre>.saturation_80 {
+background: hsla(255, 80%, 100%, 1);
+color: hsla(100, 80%, 100%, 1);
+    }</pre>
+    </div>
+    <div>
+      <pre>.saturation_90 {
+background: hsla(255, 90%, 100%, 1);
+color: hsla(100, 90%, 100%, 1);
+    }</pre>
+    </div>
+    <div>
+      <pre>.saturation_100 {
+background: hsla(255, 100%, 100%, 1);
+color: hsla(100, 100%, 100%, 1);
+    }</pre>
+    </div>
+  </div>
+</div>
+
+<div class="color_wrapper">
+  <div class="color_swatch lightness">
+    <div>
+      <pre>.lightness_10 {
+background: hsla(255, 100%, 10%, 1);
+color: hsla(100, 100%, 10%, 1);
+    }</pre>
+    </div>
+    <div>
+      <pre>.lightness_20 {
+background: hsla(255, 100%, 20%, 1);
+color: hsla(100, 100%, 20%, 1);
+    }</pre>
+    </div>
+    <div>
+      <pre>.lightness_30 {
+background: hsla(255, 100%, 30%, 1);
+color: hsla(100, 100%, 30%, 1);
+    }</pre>
+    </div>
+    <div>
+      <pre>.lightness_40 {
+background: hsla(255, 100%, 40%, 1);
+color: hsla(100, 100%, 40%, 1);
+    }</pre>
+    </div>
+    <div>
+      <pre>.lightness_50 {
+background: hsla(255, 100%, 50%, 1);
+color: hsla(100, 100%, 50%, 1);
+    }</pre>
+    </div>
+    <div>
+      <pre>.lightness_60 {
+background: hsla(255, 100%, 60%, 1);
+color: hsla(100, 100%, 60%, 1);
+    }</pre>
+    </div>
+    <div>
+      <pre>.lightness_70 {
+background: hsla(255, 100%, 70%, 1);
+color: hsla(100, 100%, 70%, 1);
+    }</pre>
+    </div>
+    <div>
+      <pre>.lightness_80 {
+background: hsla(255, 100%, 80%, 1);
+color: hsla(100, 100%, 80%, 1);
+    }</pre>
+    </div>
+    <div>
+      <pre>.lightness_90 {
+background: hsla(255, 100%, 90%, 1);
+color: hsla(100, 100%, 90%, 1);
+    }</pre>
+    </div>
+    <div>
+      <pre>.lightness_100 {
+background: hsla(255, 100%, 100%, 1);
+color: hsla(100, 100%, 100%, 1);
+    }</pre>
+    </div>
+      </div>
+    </div>    
+    
+    
+    
+    
+    
+    
+      <!-- 
+      <section class="border-radius">
+        <h1>Border Radius</h1>
+        <p class="descrip">As show below the Mozilla and W3C naming conventions differ slightly.  Confusion can be minimized only making use of the first option (border-radius / -moz-border-radius) and declaring all four values simultaneously.</p>
+        <span>
+          <h3>W3C Spec</h3>
+          <ul>
+            <li>border-radius</li>
+            <li>border-top-left-radius</li>	
+            <li>border-top-right-radius</li>	
+            <li>border-bottom-right-radius</li>	
+            <li>border-bottom-left-radius</li>
+          </ul>
+        </span>
+        <span>
+          <h3>Mozilla</h3>
+          <ul>
+            <li>-moz-border-radius</li>
+            <li>-moz-border-radius-topleft</li>
+            <li>-moz-border-radius-topright</li>
+            <li>-moz-border-radius-bottomright</li>
+            <li>-moz-border-radius-bottomleft</li>
+          </ul>
+        </span>
+        <p class="descrip">For the examples below I have omitted the '-moz' vendor prefix for readability but always remember to include it in your code</p>
+
+        <h3>Border Radius can take a single declaration to produce a circular curve</h3>
+        <div class="all_four"><pre>.all_four {
+      border-radius: 50px;
+    }</pre></div>
+        <div class="two_by_two"><pre>.two_by_two {
+      border-radius: 50px 0;
+    }</pre></div>
+        <div class="each_its_own"><pre>.each_its_own {
+      border-radius: 0 50px 50px 100px;
+    }</pre></div>
+
+        <h3>An elliptical curve can be produces by adding two values for each corner</h3>
+        <h4>Left of the slash are vertical height / Right of the slash are the horizontal length</h4>
+        <div class="single_steep"><pre>.single_steep {
+      border-radius: 20px 0 0 0 / 40px 0 0 0;
+    }</pre></div>
+        <div class="double_shallow"><pre>.double_shallow {
+      border-radius: 0 20px / 0 40px;
+    }</pre></div>
+        <div class="triple_erratic"><pre>.triple_erratic {
+      border-radius: 55px 35px 10px / 25px 55px 30px;
+    }</pre></div>
+      </section>
+      <section class="shadow">
+        <h1>Box Shadow</h1>
+        <p class="descrip">The values for the Box Shadow go following order: X-Offset, Y-Offset, Blur, and Color.</p>
+        <p class="descrip">For the examples below I have omitted the '-moz' and the '-webkit' vendor prefixes for readability but always remember to include it in your code</p>
+        <div class="typical">
+          <pre>
+    .typical {
+      box-shadow: 10px 10px 10px grey;
+    }</pre>
+        </div>
+        <div class="Y-offset">
+          <pre>
+    .Y-offset {
+      box-shadow: 0 -10px 10px grey;
+    }</pre>
+        </div>
+        <div class="X-offset">
+          <pre>
+    .X-offset {
+      box-shadow: -10px 0 10px grey;
+    }</pre>
+        </div>
+        <div class="sharp_edge">
+          <pre>
+    .sharp_edge {
+      box-shadow: -10px -10px 0 grey;
+    }</pre>
+        </div>
+        <div class="inset">
+          <pre>
+    .inset {
+      box-shadow: inset 10px 10px 0 grey;
+    }</pre>
+        </div>
+        <div class="inset_no_offset">
+          <pre>
+    .inset_no_offset {
+      box-shadow: inset 0 0 40px grey;
+    }</pre>
+        </div>
+        <div class="multi-offset">
+          <pre>
+    .multi-offset {
+      box-shadow: -10px -10px 10px grey,
+                  -10px  10px 10px grey,
+                   10px -10px 10px grey, 
+                   10px  10px 10px grey
+    }</pre>
+        </div>
+        <div class="multi-color">
+          <pre>
+    .multi-color {
+      box-shadow: -10px -10px 10px red,
+                    5px   5px  5px blue,
+                   15px  15px 15px green;
+    }</pre>
+        </div>
+      </section>
+      -->

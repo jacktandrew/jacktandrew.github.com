@@ -1,0 +1,16 @@
+Model
+  Game - Class
+    Has Players
+    Has Robots
+    Builds dominos
+    Puts them in the boneyard
+  Robot
+    Draws dominos
+    Auto Play
+  Player - Class
+    Draws dominos
+    Play
+    
+Controller
+
+View

@@ -1,0 +1,42 @@
+
+section {clear: both;}
+section, .group:after {content: ""; display: table; clear: both;}
+section {width: 100%; border-bottom: 5px solid gray;}
+nav li {display: inline-block; list-style-type: none;}
+a {text-decoration: none;}
+h1 {margin-left: 5%;}
+article {border: 1px solid black; margin: 5%; padding: 4%; width: 80%;}
+article h1 {text-align: center; font-size: 1.4em; margin: 3px;}
+summary {width: 80%; margin: 10%}
+button {margin: 0 0 20px 100px;}
+figure {border: 1px dotted black; background: #CCC; text-align: center;}
+img {width: 90%; padding-top: 5%;}
+svg, canvas {margin: 20px 0 0 50px;}
+audio, video {margin-bottom: 50px;}
+
+.html5 .gist {float: left; width: 48%;}
+.left_block {width: 41%; margin: 0 5%; float: left;}
+.loading {width: 30%; display: none;}
+.error {display: none;}
+nav a {opacity: 0.7; padding: 5px; display: block;}
+nav li {border: 1px solid blue;}
+nav .active, nav a:hover {opacity: 1; background: #EEE;}
+.content {border: 1px solid blue; padding: 10px 20px; width: 310px; }
+
+.peg_box, .hole_box {margin-left: 100px;}
+.peg_box div, .hole_box div {height: 100px; width: 100px; float: left;}
+.hole_box > div {border: 1px solid black; padding: 1px; margin: 5px; background: transparent;}
+.peg_box {height: 120px;}
+.peg_box div {margin: 10px;}
+.circle {border-radius: 50px;}
+div .rect {width: 50px;}
+.circle {background: red;}
+.square {background: blue;}
+.rect {background: yellow;}
+
+#map_canvas {height: 500px; margin-top: 20px;}
+
+@media print {
+  html, body {height: auto;}
+  #map_canvas {height: 650px;}
+}

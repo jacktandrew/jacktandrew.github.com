@@ -1,0 +1,245 @@
+<head>
+  <script src="scripts/jquery-1.7.1.min.js"></script>
+  <style>
+    * {margin: 0px; padding: 0px; list-style-type: none;}
+    body {background: #4D2615;}
+
+    p {text-indent: 20px; margin: 10px 20px;}
+    ul#nav li { float: left; }
+    ul#content li div ul {width: 350px; float: left; margin-bottom: 20px;}
+    ul#content li div.birthday ul {width: 450px;}
+    ul#content li div ul li {list-style-type: circle; margin-left: 20px;}
+    ul#content li div div.title_block {float: left; width: 360px;}
+    ul#content li div.birthday div.title_block {width: 260px;}
+
+    div#quotes {margin-top: 40px;}    
+    blockquote {border:1px dashed black; height: 130px; width: 330px; padding: 5px; margin: 5px; float: left;}
+    blockquote p {text-indent: 0px; margin: 5px; font-size: 15px;}
+    blockquote:first-child p {margin: 40px 15px 5px;}
+    blockquote:last-child p {margin: 23px 24px 5px;}
+    blockquote strong {float: left; font-size: 50px; line-height: 15px; margin: 15px 10px 0 0;}
+    blockquote em {margin: 25px; font-size: 14px;}
+    div#intro img{ float: right;}
+    div#intro {background: #fdf9d6; padding: 50px;}
+    
+    h1, h2, h3, h4, h5, h6 { margin: 5px;}
+    ul#nav {height: 53px; width: 1210px;}
+    #wrapper {margin:0px auto; width: 1210px;}
+
+    ul#content li > div, ul#forms li div {position: absolute; height: 475px; width: 1087px; background: #fdf9d6; border: 1px solid black; padding: 30px 60px; z-index: -1; display: none;}
+    ul#content li div {top: -100px; font-size: 15px;}
+    
+    ul#nav { background-color: #bbb; font-size: 0px;}
+    ul#nav {background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #d6d6d6), color-stop(0.4, #c0c0c0), color-stop(1,#a4a4a4)); z-index: 2;}
+    ul#nav li:hover { background-color: #ddd;}    
+    ul#nav li:first-child { border-left: none; opacity: 1;}
+    ul#nav li:last-child {line-height: 9px; font-size: 30px;}
+    ul#nav li { font-size: 20px; font-weight: bold; display: inline-block; padding: 0.75em 2em; cursor: pointer; color: #444; text-shadow: #f7f7f7 0 1px 1px; border-left: 1px solid #ddd; border-right: 1px solid #888;}
+    ul#nav li { *display: inline !important; } /* IE7 only */
+    ul#nav .active { background-color: #444 !important; color: white; text-shadow:none; border-right-color: #aaa; border-left: none; box-shadow:inset 1px 2px 6px #070707;}
+    ul#content li img {border: 1px solid black; float: right; margin: 25px;}
+  </style>
+  <script>
+  $(function(){
+    $('.photo_box').text('INSERT PICTURE')
+    
+    slideItDown = function(it) {
+      if(typeof(it) === 'string') { var target = it }
+      else { var target = $(this).data('link') }
+      if( $('ul#content .' + target).hasClass('active') === false ){
+        var previousContent = $('ul#content div.active').css({'z-index': -2})
+        $('.active').removeClass('active')
+        $('ul#nav .' + target).addClass('active')
+        $('ul#content .' + target).show().addClass('active').animate({top: '467px', 'z-index': 1}, 900, function(){
+          previousContent.hide().css({top: '-100px', 'z-index': -1})
+          
+        });
+      }
+    }
+
+    $('ul#nav li').click( slideItDown );
+  });
+  </script>
+</head>
+<body>
+<div id="wrapper">
+<div id="intro">
+  <img src="images/image_here.svg.png" />
+  <h2>Zaw Catering &amp; Parties</h2>
+  <h4>contact and questions</h4>
+  <h4><a href="mailto:catering@zaw.com">catering@zaw.com</a></h4>
+  <br/><br/>
+  <p>Thinking about something special for your group? It should come as no surprise that our pizzas were made to party!</p>
+
+  <p>We absolutely love catering and it makes sense, Zaw is such a great and unique idea for parties and events.  The pizzas can be made ready before they are needed, and the timing of hot pizzas can be perfectly matched for exactly when you want it.  To top it off we make amazing salads and cookies for additional great options to put any gathering over the top.  Did you know that we can deliver beer, wine, & sodas as well?</p>
+
+  <p>From 8 to 100 people &ndash; and from wedding rehearsals to corporate events to kids' birthday parties and everything in between &ndash; we are all about making great food and making you look really good in the process!</p>
+
+  <p>Here are 4 potential options &ndash; or let us know if you have something else in mind.</p>
+</div>
+
+<ul id="nav">
+  <li data-link='events' class="events">
+    Parties &amp; Events
+  </li>
+  <li data-link='special_night' class="special_night">
+    Special Night
+  </li>
+  <li data-link='birthday' class="birthday">
+    Kid's Birthday
+  </li>
+  <li data-link='meetings' class="meetings">
+    Day-Time Meetings
+  </li>
+  <li data-link='forms' class="forms">
+    Order Form
+  </li>
+</ul>
+
+<ul id="content">
+  <li>
+    <div class="events ">
+      <img src="images/image_here.svg.png" />
+      <div class="">
+        <h2>Parties &amp; Events</h2>
+        <h4>20-100 People</h4>
+        <h4>Options starting at $5.95/person*</h4>
+      </div>
+
+      <p>We know it is not only important but paramount, to get great food and to make sure it is on time.  We'll have prepared for pick-up or deliver to you, before a guaranteed time, an incredible selection of pizzas that are ready for baking &amp; ready to be fresh and hot when you want them.  We can add great salads and cookies into the equation as well.</p>
+      
+      <strong>Option 1 &ndash; All About The Pizza - $5.95/person*</strong>
+
+      <p>A great selection of pizzas for your group, we'll make sure you have enough for everyone.  You can choose the pizzas from our menu options or we would be happy to make a suggestion for you.</p>
+
+      <strong>Option 2 &ndash; Pizza And A Little Bit More - $8.95/person*</strong>
+
+      <p>In addition to your artisan pizza fix, we'll provide you with delectable bowl salads that will inspire the healthiest of eaters in your group.  Choose from any of our salads including our seasonal creations.</p>
+
+      <strong>Option 3 &ndash; The Whole Deal - $9.95/person*</strong>
+
+      <p>While enjoying the incredible pizzas and salads that are part of this option, you and your guests will also be thinking about the aroma creating, mouth watering, fresh out of the oven, sharable cookies that will round out your food experience.</p>
+
+      <p>If you're looking for easy solutions for paired wine, beer, or sodas at grocery store pricing &ndash; let us know as we would be happy to provide anything that will make your event more complete or easier for you to organize.  Same goes for paper plates, napkins, or compostable cutlery &ndash; we'll be happy to offer easy solutions to make your life easier.</p>
+
+      <p>*prices do not include taxes or gratuities</p>
+    </div>    
+  </li>
+
+  <li>
+    <div class="special_night ">
+      <img src="images/image_here.svg.png" />
+      <div class="title_block">
+        <h2>Special Night In</h2>
+        <h3>Pizza &amp; Wine Tasting and Pairing Night</h3>
+        <h4>8 -16 People</h4>
+        <h4>$140 for a group of 8 great people*</h4>
+        <h4>$15/person for additional*</h4>
+      </div>
+      
+      <ul>
+        <h4>The price includes:</h4>
+        <li>Artisan Salad &amp; Flatbread Appetizer</li>
+        <li>A selection of incredible pizzas of your choice</li>
+        <li>Perfectly paired wines for each pizza</li>
+        <li>Fresh baked, hot out of the oven cookies for dessert</li>
+        <li>An artisan from Zaw for 2 hours to guide the wine tasting, bake the pizzas, and serve the food</li>
+      </ul>
+
+      <p>Let us help you put together a unique, fantastic, and ultra-special gathering for a group of your best friends or family &ndash; and create one of the best nights in you can enjoy.  We'll provide you with an amazing selection of pizzas, salad, baked dessert, and a perfectly paired wine tasting &ndash; complete with one of our seasoned Zaw artisans to talk about the wines and food, bring everything to your house, bake the pizzas, and serve your guests.</p>
+      <p>*prices do not include taxes or gratuities</p>
+
+      <div id="quotes">
+        <blockquote class="pull">
+          <p><strong>&#8220;</strong>
+            A perfect gathering: great story, delicious local food, fun people, no responsibility!</p>
+          <em>&ndash; Dr. Susan Kleiner, High Performance Nutrition</em>
+        </blockquote>
+
+        <blockquote class="pull">
+          <p><strong>&#8220;</strong>
+            My friends all enjoyed the different types of pizzas that were so artfully prepared and paired with a different local wine ... it really makes you want to support these guys once you get the chance to know them and how they approach food sourcing!</p>
+          <em>&ndash; Edee Phillips, Mercer Island Farmers Market</em>
+        </blockquote>
+
+        <blockquote class="pull">
+          <p><strong>&#8220;</strong>
+            A fantastic, easy, and tremendously unique evening.  We couldn't wait to do it again with a different group of friends ... so we did!  We all had so much fun.</p>
+          <em>&ndash; Cori Whitaker, Windermere Real Estate</em>
+        </blockquote>
+      </div>
+    </div>
+  </li>
+
+  <li>
+    <div class="birthday ">
+      <img src="images/image_here.svg.png" />
+      <div class="title_block">
+        <h2>Kid's Birthday</h2>
+        <h3>Pizza Making Parties</h3>
+        <h4>8-12 Kids</h4>
+        <h4>$8.95/person*</h4>
+      </div>
+
+      <ul>
+        <h4>The price includes:</h4>
+        <li>2 of our Zaw pros to guide and help the kids for 2 hours</li>
+        <li>A special and fun pizza competition event</li>
+        <li>A special gift from Zaw for the Birthday boy or girl</li>
+        <!-- <li>We'll clean up the mess</li> -->
+      </ul>
+      <ul>
+        <h4>Each partier will take home:</h4>
+        <li>a self-made personalized pipsqueak pizza</li>
+        <li>a special kids sized bake-at-home cookie</li>
+        <li>a personalized party favor bag to carry their goods</li>
+      </ul>
+      <p>Let our super fun staff organize the perfect pizza party for your favorite boy or girl.  Our entire store will be yours at 11 am for 2 hours of hassle free pizza making and events &ndash; and we'll clean up the mess.  Each partier will leave with a personalized party favor bag to carry home their pipsqueak pizza that they have made themselves (ready for baking), and a mouth watering bake-at-home kids sized cookie.</p>
+      
+      <p>2 of our Zawtists will be on hand to guide your group on a fun filled pizza making tutorial from start to finish on how to make pizzas, including hand rolling and tossing their dough and topping their own pipsqueak pizzas with their choice of organically or locally sourced ingredients.</p>
+
+      <p>When not making pizzas, our Zaw Pros will help each child create their own personalized Zaw party favor bag to use to take home their pizza creations (ready to be baked) and a kids sized bake-at-home cookie for an after pizza treat.  A pizza competition event will also be organized to complete the party!</p>
+
+      <p>If you want to continue the pizza party at your home after, you can bake the pizzas everyone made for lunch or we'll offer and make any of our large pizzas from our menu for $3 off their regular price.  You can feed your entire group or just have lunch ready for yourself and your family for after the birthday party.</p>
+
+      <p>*prices do not include taxes or gratuities</p>
+    </div>
+  </li>
+
+  <li>
+    <div class="meetings ">
+      <!-- <img src="images/image_here.svg.png" /> -->
+      <div class="">
+        <h2>Day-Time Meetings</h2>
+      </div>
+
+      <p>If you're looking for something 'fresh' for your next meeting or event &ndash; try Zaw for amazing options to put some S.O.U.L. into what you are eating.  We're known for our artisan bake-at-home pizzas &ndash; but for day-time meetings &ndash; we offer straight form our kitchen a selection of incredible house made baked sandwiches on our own baguettes, delicious salads, and baked pizzas too!</p>
+    
+      <strong>Option 1 &ndash; The Pizza Meeting - $6.95/person*</strong>
+
+      <p>We know your busy, so we try to make this as easy as possible so you can spend less time organizing and more time on the other things you have to do.  Just tell us how many people and the time, and we'll deliver a great selection of pizzas to keep your group very happy.  You can choose the pizzas from our menu if you want, or we would be happy to help make the decisions and bring a great selection for you.</p>
+
+      <strong>Option 2 &ndash; The Pizza And Fresh Baguette Meeting - $8.95/person*</strong>
+
+      <p>In addition to a great selection of pizzas, we'll add to the mix a variety of fresh baked baguette sandwiches featuring our made from scratch sourdough baguettes and complimented by the freshest local meats and cheeses.</p>  
+
+      <strong>Option 3 &ndash; The Ultimate Meeting Luncheon - $10.95/person*</strong>
+
+      <p>We'll provide everything you need for an amazing luncheon to make your meeting a success.  A variety of baked pizzas (or a mix of baked pizzas and baguettes sandwiches), house-made salads, and fresh baked cookies for dessert.  All we need to know is the time and number of people, and we will do our best to make you look great!</p>
+
+      <p>If you're looking for easy solutions for paired wine, beer, or sodas at grocery store pricing &ndash; let us know as we would be happy to provide anything that will make your meeting more complete or easier for you to organize.  Same goes for paper plates, napkins, or compostable cutlery &ndash; we can offer a solution to take care of as much as you need to make it smooth on your end.</p>
+
+      <p>We know it is important to be efficient, and we will provide you with a complete quote and invoicing to make your life easier.</p>
+
+
+
+      <p>*prices do not include taxes or gratuities, please try to book the catering of your meeting at least 2 days prior<p>
+    </div>
+  </li>
+  <li>
+    <div class="forms"></div>
+  </li>
+</ul>
+
+</div>
+</body>

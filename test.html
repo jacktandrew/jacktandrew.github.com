@@ -1,0 +1,57 @@
+<head>
+  <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+  <script>
+  $(document).ready(function() {
+    $("#datepicker").datepicker();
+  });
+  </script>
+  <style>
+  .group:before, .group:after {content:""; display:table;}
+  .group:after {clear:both;}
+    form {position: relative;}
+    .left {float: left; width: 400px;}
+    label {width: 160px; display: inline-block; margin: 5px 0;}
+    input, select {width: 160px;}
+    button {width: 325px; position: absolute; bottom: 0px;}
+  </style>
+</head>
+<body>
+
+
+
+  <form name="orderForm" class="group">
+    <div class="left">
+      <label for="first_name">First Name *</label>
+      <input  type="text" name="first_name"></br>
+
+      <label for="last_name">Last Name *</label>
+      <input  type="text" name="last_name"></br>
+    
+      <label for="telephone">Telephone Number</label>
+      <input  type="text" name="telephone"></br>
+
+      <label for="email">Email Address *</label>
+      <input  type="text" name="email"></br>
+    </div>
+
+    <div class="left">
+      <label for="date_of_event">Date of Event *</label>
+      <input id="datepicker" /></br>
+
+      <label for="type_of_function">Date of Event *</label>
+      <select name="type_of_function">
+        <option></option>
+        <option value="event">Event</option>
+        <option value="special_night">Special Night</option>
+        <option value="birthday">Birthday</option>
+        <option value="meeting">Meeting</option>
+      </select></br>
+
+      <label for="num_of_people">Approx. # of people *</label>
+      <input  type="text" name="num_of_people"></br>
+      <button>Email Form</button>
+    </div>
+  </form>
+</body>

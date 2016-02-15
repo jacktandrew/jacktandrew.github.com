@@ -1,0 +1,388 @@
+
+
+<head>
+  <script src="scripts/jquery-1.7.1.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+  <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
+  <style>
+    #gap_filler {height: 5px; width: 100%; background: #4D2615; position: relative; z-index: 5;}
+    #new_nav {background: #FDF9D6 url('images/newlogo.jpg') no-repeat; height: 150px; position: relative;}
+    #new_nav ul {position: absolute; bottom: 25px; left: 50px;}
+    #new_nav ul li {display: inline-block;}
+    #new_nav ul li a {padding: 10px 20px; color: #4D2615; text-decoration: none;
+      font: 12px normal Verdana, Arial, Helvetica, sans-serif;}
+    .group:before, .group:after {content:""; display:table;}
+    .group:after {clear:both;}
+  
+    * {margin: 0px; padding: 0px; list-style-type: none;}
+    textarea {resize: none;}
+    body {background: #4D2615; overflow: scroll; height: 675px;}
+    .left {float: left; position: relative;}
+    #new_wrapper {margin: 0 auto; width: 57em; background-color: #fdf9d6;}
+    #text > img {float: right; margin: 50px 0px 0px; width: 250px;}
+    p {text-indent: 20px; margin: 10px;}
+    h1, h2, h3, h4, h5, h6, blockquote, blockquote p {margin: 5px;}
+    
+    div#text {background-color: #fdf9d6; padding: 10px 50px;}
+    ul#content img {border: 1px solid black; float: right; margin-left: 50px; width: 200px;}
+    ul#content li > div {padding: 25px 50px;}
+    div#intro h1 {margin: 5px 0 20px;}
+    div#intro {width: 550px; float: left;}
+    
+    ul#content li.special_night div ul {margin: 1.25em 0.375em 0em;}
+    blockquote, ul#content li.special_night div ul {width: 23.25em; padding: 0.25em; height: 8.5em; float: left;}
+    blockquote {border: 1px dashed black;}
+    blockquote.pull:first-child {margin-top: 2.5em;}
+    blockquote p {text-indent: 0em;}
+    blockquote:first-child p {margin-top: 2.5em;}
+    blockquote:last-child p {margin-top: 1em;}
+    blockquote strong {float: left; font-size: 3em; line-height: 1em; margin: 0em 0.3em 1em 0;}
+    
+    #new_nav, #wrapper, ul#cater_nav, ul#cater_nav li, div#text, div#text div {position: relative; z-index: 5;}
+    ul#content, a#email {position: relative;}
+    ul#content > li {position: absolute; top: -600px; background: #fdf9d6; margin-bottom: 50px;}
+    ul#content li > div {height: 350px;}
+    ul#content li > div.summary {height: 150px;}
+    ul#content li div ul {float: left;}
+    ul#content li.birthday div ul {margin: 0px 20px 32px; width: 355px;}
+    ul#content li div ul li {list-style-type: circle; margin-left: 20px;}
+    ul#content li.meetings div.details {font-size: .875em;}
+    
+    ul#content li.order_form {top: -210px; height: 130px; width: 812px; padding: 20px 50px 60px;}
+    li.order_form form {position: relative;}
+    li.order_form .left {float: left; width: 400px;}
+    li.order_form label {width: 160px; display: inline-block; margin: 5px 0;}
+    li.order_form label.comments {vertical-align: top;}
+    li.order_form input, li.order_form select {width: 180px;}
+    
+    button.show_more, button.show_form, li.order_form button {height: 30px; width: 200px; font-size: 1em; cursor: pointer; position: absolute; bottom: 15px;}
+    li.order_form button#email_form, button.show_more {left: 100px;}
+    button.show_form, li.order_form button#hide_form {left: 350px;}
+   
+    ul#cater_nav { background-color: #666; height: 181px;}
+    ul#cater_nav, a#email, button {
+      background-color: #ccc;
+      background-image: linear-gradient(bottom, rgb(189,189,189) 0%, rgb(224,224,224) 16%);
+      background-image: -o-linear-gradient(bottom, rgb(189,189,189) 0%, rgb(224,224,224) 16%);
+      background-image: -moz-linear-gradient(bottom, rgb(189,189,189) 0%, rgb(224,224,224) 16%);
+      background-image: -webkit-linear-gradient(bottom, rgb(189,189,189) 0%, rgb(224,224,224) 16%);
+      background-image: -ms-linear-gradient(bottom, rgb(189,189,189) 0%, rgb(224,224,224) 16%);
+    }
+    ul#cater_nav li h3 {font-size: 1.25em; text-decoration: underline;}
+    ul#cater_nav li h4 {font-size: .85em;}
+    ul#cater_nav li h5 {font-size: .75em;}
+    ul#cater_nav li h6 {font-size: .6em;}
+    ul#cater_nav li:hover, button:hover, a#email:hover {background: #eee;}
+    ul#cater_nav li:first-child { border-left: none; opacity: 1;}
+    ul#cater_nav li:last-child { border-right: none; }
+    ul#cater_nav li {float: left; font-size: 1.25em; display: inline-block; padding: 0.75em 0em; height: 151px; width: 24.8%; text-align: center; cursor: pointer; border-left: 1px solid #ddd; border-right: 1px solid #888;}
+    ul#cater_nav li, a#email, button {color: #444; text-shadow: #f7f7f7 0 1px 1px; font-weight: bold;}
+    a#email {border: 1px solid #888; font-size: 1.25em; float: right; z-index: 6; padding: 10px; text-decoration: none; text-align: center; float: right; margin: 30px;}
+    ul#cater_nav li { *display: inline !important; } /* IE7 only */
+    ul#cater_nav .active { background-color: #444 !important; color: white; text-shadow:none; border-right-color: #aaa; border-left: none; box-shadow:inset 1px 2px 6px #070707;}
+    
+  </style>
+  <script>
+  $(function(){
+    $("#datepicker").datepicker();
+
+    var controlActions = function(event){
+      event.stopPropagation();
+      var target = $(this).data('link')
+      var previous = $('ul#cater_nav li.active')[0]
+      buttonToggle(previous, this)
+      if (previous === undefined) {
+        $('#text').slideUp(900)
+        setTimeout(downHalf, 900, target)
+      } else if (previous === this) {
+        upWhole();
+        setTimeout($('#text').slideDown(900), 900)
+      } else {
+        if ($('ul#content li.order_form').hasClass('active')){
+          upForm();
+        } else {
+          upWhole()
+        }
+        setTimeout(downHalf, 900, target)
+      }
+    }
+
+    var buttonToggle = function (previous, current){
+      if (current !== previous) {
+        $(current).addClass('active')
+      }
+      $(previous).removeClass('active')
+    }
+
+    var upWhole = function (){
+      $('button.show_more').unbind('click')
+      $('ul#content li.active').stop().removeClass('active').animate({'top': '-600px'}, 900)
+    }
+
+    var downHalf = function (target){
+      $('button.show_more').bind('click', downWhole).text('Show Details')
+      $('ul#content li.' + target).stop().addClass('active').animate({'top': '-400px'}, 900)
+    }
+    
+    var upHalf = function (event){
+      event.stopPropagation();
+      $(this).unbind('click', upHalf).bind('click', downWhole)
+      $('ul#content li.active').stop().animate({'top': '-413px'}, 900, function(){
+        $('button.show_more').text('Show Details')
+      });
+    }
+    
+    var downWhole = function (event){
+      event.stopPropagation();
+      $(this).unbind('click', downWhole).bind('click', upHalf)
+      $('ul#content li.active').stop().animate({'top': '0px'}, 900, function(){
+        $('button.show_more').text('Hide Details')
+      });
+    }
+    
+    var downForm = function (){
+      $('ul#content li.active').stop().animate({'top': '-600px'}, 900, function(){
+        $('li.order_form button#hide_form').bind('click', upForm)
+        $('ul#content li.order_form').stop().addClass('active').animate({'top': '0px'}, 900)
+      });
+    }
+    
+    var upForm = function (){
+      var target = $('ul#cater_nav li.active').data('link')
+      $('ul#content li.order_form').stop().removeClass('active').animate({'top': '-210px'}, 900, function(){
+        downHalf(target)
+      });
+    }
+    
+    $('ul#content li button.show_form').click( downForm );
+    $('ul#cater_nav li').click( controlActions );
+  });
+  </script>
+</head>
+<body>
+  <div id="gap_filler"></div>
+  <div id="new_wrapper">
+    <div id="new_nav">  
+      <a id="email" target="_blank" href="mailto:catering@zaw.com">
+        <h4>Contact and Questions</h4>
+        <h4>catering@zaw.com</h4>
+      </a>
+      <ul>
+        <li><a href="http://zaw.dishcloud.com/index.php" target="_blank">order now</a></li>
+        <li><a href="locations.htm">locations</a></li>
+        <li><a href="menu.htm">menu</a></li>
+        <li><a href="catering.htm">catering</a></li>
+        <li><a href="about.htm">about us</a></li>
+        <li><a href="suppliers.htm">suppliers</a></li>
+      </ul>
+    </div>
+    <div id="text" class="group">
+      <div id="intro">
+        <h1>Zaw Catering &amp; Parties</h1>
+        <p>Thinking about something special for your group? It should come as no surprise that our pizzas were made to party!</p>
+
+        <p>We absolutely love catering and it makes sense, Zaw is such a great and unique idea for parties and events.  The pizzas can be made ready before they are needed, and the timing of hot pizzas can be perfectly matched for exactly when you want it.  To top it off we make amazing salads and cookies for additional great options to put any gathering over the top.  Did you know that we can deliver beer, wine, &amp; sodas as well?</p>
+
+        <p>From 8 to 100 people &mdash; and from wedding rehearsals to corporate events to kids' birthday parties and everything in between &mdash; we are all about making great food and making you look really good in the process!</p>
+
+<!-- <p>Here are 4 potential options &mdash; or let us know if you have something else in mind.</p> -->
+      </div> <!-- intro -->
+      <img src="images/image_here.svg.png" />
+    </div> <!-- text -->
+    <ul id="cater_nav">
+      <li data-link='events' class="events">
+        <div class="title_block">
+          <h3>Parties &amp; Events</h4>
+          <h5>20&ndash;100 People</h5>
+          <h5>Options start at $5.95/person*</h5>
+        </div>
+      </li>
+      <li data-link='special_night' class="special_night">
+        <div class="title_block">
+          <h3>Pizza, Wine Tasting <br/> &amp; Pairing Night</h3>
+          <h5>8&ndash;16 People</h5>
+          <h5>$140 for a group of 8 people*</h5>
+          <h5>$15/person for additional*</h5>
+        </div>
+      </li>
+      <li data-link='birthday' class="birthday">
+        <div class="title_block">
+          <h3>Kid's Birthday</h3>
+          <h4>Pizza Making Parties</h4>
+          <h5>8&ndash;12 Kids</h5>
+          <h5>$8.95/person*</h5>
+        </div>
+      </li>
+      <li data-link='meetings' class="meetings">
+        <div class="title_block">
+          <h3>Daytime Meetings</h3>
+          <h5>10&ndash;30 people</h5>
+          <h5>Options start at $6.95/person*</h5>
+        </div>
+      </li>
+    </ul>
+
+    <ul id="content">
+      <li class="events group">
+        <div class="details">
+          <strong>Option 1 &mdash; All About The Pizza &mdash; $5.95/person*</strong>
+          <p>A great selection of pizzas for your group, we'll make sure you have enough for everyone.  You can choose the pizzas from our menu options or we would be happy to make a suggestion for you.</p>
+
+          <strong>Option 2 &mdash; Pizza And A Little Bit More &mdash; $8.95/person*</strong>
+          <p>In addition to your artisan pizza fix, we'll provide you with delectable bowl salads that will inspire the healthiest of eaters in your group.  Choose from any of our salads including our seasonal creations.</p>
+
+          <strong>Option 3 &mdash; The Whole Deal &mdash; $9.95/person*</strong>
+          <p>While enjoying the incredible pizzas and salads that are part of this option, you and your guests will also be thinking about the aroma creating, mouth watering, fresh out of the oven, sharable cookies that will round out your food experience.</p>
+
+          <p>If you're looking for easy solutions for paired wine, beer, or sodas at grocery store pricing &mdash; let us know as we would be happy to provide anything that will make your event more complete or easier for you to organize.  Same goes for paper plates, napkins, or compostable cutlery &mdash; we'll be happy to offer easy solutions to make your life easier.</p>
+
+          <p>*prices do not include taxes or gratuities</p>
+        </div>
+        <div class="summary">
+          <img src="images/image_here.svg.png" />
+          <p>We know it is not only important but paramount, to get great food and to make sure it is on time.  We'll have prepared for pick-up or deliver to you, before a guaranteed time, an incredible selection of pizzas that are ready for baking &amp; ready to be fresh and hot when you want them.  We can add great salads and cookies into the equation as well.</p>
+        </div>
+        <button type="button" class="show_more">Show Details</button>
+        <button type="button" class="show_form">Order Form</button>
+      </li>
+
+      <li class="special_night group">
+        <div class="details">
+          <ul>
+            <h4>The price includes:</h4>
+            <li>Artisan Salad &amp; Flatbread Appetizer</li>
+            <li>A selection of incredible pizzas of your choice</li>
+            <li>Perfectly paired wines for each pizza</li>
+            <li>Fresh baked, hot out of the oven cookies for dessert</li>
+            <li>An artisan from Zaw for 2 hours to guide the wine tasting, bake the pizzas, and serve the food</li>
+          </ul>
+      
+          <div id="quotes">
+            <blockquote class="pull">
+              <p><strong>&#8220;</strong>
+                A perfect gathering: great story, delicious local food, fun people, no responsibility!</p>
+              <em>&mdash; Dr. Susan Kleiner, High Performance Nutrition</em>
+            </blockquote>
+
+            <blockquote class="pull">
+              <p><strong>&#8220;</strong>
+                My friends all enjoyed the different types of pizzas that were so artfully prepared and paired with a different local wine ... it really makes you want to support these guys once you get the chance to know them and how they approach food sourcing!</p>
+              <em>&mdash; Edee Phillips, Mercer Island Farmers Market</em>
+            </blockquote>
+
+            <blockquote class="pull">
+              <p><strong>&#8220;</strong>
+                A fantastic, easy, and tremendously unique evening.  We couldn't wait to do it again with a different group of friends ... so we did!  We all had so much fun.</p>
+              <em>&mdash; Cori Whitaker, Windermere Real Estate</em>
+            </blockquote>
+            <p>*prices do not include taxes or gratuities</p>
+          </div>
+        </div>
+        <div class="summary">
+          <img src="images/image_here.svg.png" />
+          <p>Let us help you put together a unique, fantastic, and ultra-special gathering for a group of your best friends or family &mdash; and create one of the best nights in you can enjoy.  We'll provide you with an amazing selection of pizzas, salad, baked dessert, and a perfectly paired wine tasting &mdash; complete with one of our seasoned Zaw artisans to talk about the wines and food, bring everything to your house, bake the pizzas, and serve your guests.</p>
+        </div>
+        <button type="button" class="show_more">Show Details</button>
+        <button type="button" class="show_form">Order Form</button>
+      </li>
+
+      <li class="birthday group">
+        <div class="details">
+          <ul>
+            <h4>The price includes:</h4>
+            <li>Two Zaw pros to guide and help the kids for 2 hours</li>
+            <li>A special and fun pizza competition event</li>
+            <li>A special gift from Zaw for the Birthday boy or girl</li>
+          </ul>
+          <ul>
+            <h4>Each partier will take home:</h4>
+            <li>A self-made personalized pipsqueak pizza</li>
+            <li>A special kids sized bake-at-home cookie</li>
+            <li>A personalized party favor bag to carry their goods</li>
+          </ul>
+          <p>Two of our Zawtists will be on hand to guide your group on a fun filled pizza making tutorial from start to finish on how to make pizzas, including hand rolling and tossing their dough and topping their own pipsqueak pizzas with their choice of organically or locally sourced ingredients.</p>
+          <p>When not making pizzas, our Zaw Pros will help each child create their own personalized Zaw party favor bag to use to take home their pizza creations (ready to be baked) and a kids sized bake-at-home cookie for an after pizza treat.  A pizza competition event will also be organized to complete the party!</p>
+          <p>If you want to continue the pizza party at your home after, you can bake the pizzas everyone made for lunch or we'll offer and make any of our large pizzas from our menu for $3 off their regular price.  You can feed your entire group or just have lunch ready for yourself and your family for after the birthday party.</p>
+          <p>*prices do not include taxes or gratuities</p>
+        </div>
+        <div class="summary">
+          <img src="images/image_here.svg.png" />
+          <p>Let our super fun staff organize the perfect pizza party for your favorite boy or girl.  Our entire store will be yours at 11 am for 2 hours of hassle free pizza making and events &mdash; and we'll clean up the mess.  Each partier will leave with a personalized party favor bag to carry home their pipsqueak pizza that they have made themselves (ready for baking), and a mouth watering bake-at-home kids sized cookie.</p>
+        </div>
+        <button type="button" class="show_more">Show Details</button>
+        <button type="button" class="show_form">Order Form</button>
+      </li>
+
+      <li class="meetings group">
+        <div class="details">
+          <strong>Option 1 &mdash; The Pizza Meeting - $6.95/person*</strong>
+          <p>We know your busy, so we try to make this as easy as possible so you can spend less time organizing and more time on the other things you have to do.  Just tell us how many people and the time, and we'll deliver a great selection of pizzas to keep your group very happy.  You can choose the pizzas from our menu if you want, or we would be happy to help make the decisions and bring a great selection for you.</p>
+          <strong>Option 2 &mdash; The Pizza And Fresh Baguette Meeting - $8.95/person*</strong>
+          <p>In addition to a great selection of pizzas, we'll add to the mix a variety of fresh baked baguette sandwiches featuring our made from scratch sourdough baguettes and complimented by the freshest local meats and cheeses.</p>  
+          <strong>Option 3 &mdash; The Ultimate Meeting Luncheon - $10.95/person*</strong>
+          <p>We'll provide everything you need for an amazing luncheon to make your meeting a success.  A variety of baked pizzas (or a mix of baked pizzas and baguettes sandwiches), house-made salads, and fresh baked cookies for dessert.  All we need to know is the time and number of people, and we will do our best to make you look great!</p>
+          <p>If you're looking for easy solutions for paired wine, beer, or sodas at grocery store pricing &mdash; let us know as we would be happy to provide anything that will make your meeting more complete or easier for you to organize.  Same goes for paper plates, napkins, or compostable cutlery &mdash; we can offer a solution to take care of as much as you need to make it smooth on your end.</p>
+          <p>We know it is important to be efficient, and we will provide you with a complete quote and invoicing to make your life easier.</p>
+          <p>*prices do not include taxes or gratuities, please try to book the catering of your meeting at least 2 days prior<p>
+        </div>
+    
+        <div class="summary">
+          <img src="images/image_here.svg.png" />
+          <p>If you're looking for something 'fresh' for your next meeting or event &mdash; try Zaw for amazing options to put some S.O.U.L. into what you are eating.  We're known for our artisan bake-at-home pizzas &mdash; but for day-time meetings &mdash; we offer straight form our kitchen a selection of incredible house made baked sandwiches on our own baguettes, delicious salads, and baked pizzas too!</p>
+        </div>
+        <button type="button" class="show_more">Show Details</button>
+        <button type="button" class="show_form">Order Form</button>
+      </li>
+    
+      <li class="order_form">
+        <form name="orderForm">
+          <div class="left">
+            <label for="first_name">First Name *</label>
+            <input  type="text" name="first_name"></br>
+
+            <label for="last_name">Last Name *</label>
+            <input  type="text" name="last_name"></br>
+          
+            <label for="telephone">Telephone Number</label>
+            <input  type="text" name="telephone"></br>
+
+            <label for="email">Email Address *</label>
+            <input  type="text" name="email"></br>
+          </div>
+
+          <div class="left">
+            <label for="date_of_event">Date of Event *</label>
+            <input id="datepicker" /></br>
+
+            <label for="type_of_function">Date of Event *</label>
+            <select name="type_of_function">
+              <option></option>
+              <option value="event">Event</option>
+              <option value="special_night">Special Night</option>
+              <option value="birthday">Birthday</option>
+              <option value="meeting">Meeting</option>
+            </select></br>
+
+            <label for="num_of_people">Approx. # of people *</label>
+            <input  type="text" name="num_of_people"></br>
+            
+            <label class="comments" for="comments">Comments</label>
+            <textarea rows="4" cols="25"></textarea></br>
+          </div>
+        </form>
+        <button id="email_form">Email Form</button>
+        <button id="hide_form">Hide Form</button>
+      </li>
+    </ul>    
+  </div> <!-- #wrapper -->
+</body>
+
+
+
+
+
+
+
+
+
+

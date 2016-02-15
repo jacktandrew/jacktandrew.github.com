@@ -1,0 +1,3 @@
+[submodule "threes.js"]
+	path = threes.js
+	url = git@github.com:jacktandrew/threes.js.git

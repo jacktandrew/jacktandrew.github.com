@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+  <meta charset=utf-8>
+  <title>HTML5 Summary</title>
+  <link rel="stylesheet" type="text/css" href="stylesheets/html5summary.css">
+  <style>
+  </style>
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true"></script>
+  <script src="js/html5.js"></script>
+  <script src="js/smiley.js"></script>
+</head>
+<body onload="drawShape();" class="html5">
+  <h1>Summary of HTML5</h1>
+  <section>
+    <h1>Simple Page Structure</h1>
+    <div class="left_block">
+      <p>
+        HTML5 greatly simplifies the boilerplate for a html page.  As you can 
+        see in the code snippet on the right the code is much shorter and much 
+        more readable.
+      </p>
+    </div>
+    <script src="https://gist.github.com/3916296.js?file=Simpler Page Structure.html"></script>
+  </section>
+  <section>
+    <h1>Semantic Tags</h1>
+    <div class="left_block">
+      <p>
+        Common class and id names such as <code>Header</code>, <code>Footer</code>, <code>Nav</code> and <code>Aside</code> 
+        have all been incorporated as tags in their own right.  These tag add no 
+        new special functionality but instead create a uniform naming convention
+        allowing code to more quickly and more accurately be read by others.
+      </p>
+    </div>
+    <script src="https://gist.github.com/3916296.js?file=Semantic Tags"></script>    
+  </section>
+  <section>
+    <h1>New Tags</h1>
+    <div class="left_block">
+      <figure>
+        <img src="media/test_image.png" />
+        <figcaption>This is a caption for the test image</figcaption>
+      </figure>
+      <summary>
+        You can write a small summary and have a disclosure triangle which...
+        <details>
+          reveals the details when clicked!
+        </details>
+      </summary>
+      <article>
+        <header>
+          <h1>What is the Article for?</h1>
+        </header>
+        <p>The article element represents a component of a page that consists of a self-contained composition in a document, page, application, or site and that is intended to be independently distributable or reusable, e.g. in syndication. This could be a forum post, a magazine or newspaper article, a blog entry, a user-submitted comment, an interactive widget or gadget, or any other independent item of content.</p>
+        <footer>
+          <cite>
+            <a href="http://www.w3.org/TR/html5/semantics.html#the-article-element">W3C Specification</a>
+          </cite>
+        </footer>
+      </article>
+    </div>
+    <script src="https://gist.github.com/3916296.js?file=Other New Tags.html"></script>
+  </section>
+  <section>
+    <h1>Canvas</h1>
+    <div class="left_block">
+      <p>The canvas element can be used to draw graphics on the fly with JavaScript.</p>
+      <canvas id="smiley" width="220" height="220">
+    </div>
+    <script src="https://gist.github.com/3916296.js?file=Canvas"></script>
+  </section>
+  <section>
+    <h1>Scaleable Vector Graphics - SVG</h1>
+    <div class="left_block">
+      <p>SVG are defined in XML text files. They can be created and edited with any text editor, 
+        but it is often more convenient to create them with drawing programs.</p>
+      <svg width="220" height="220" xmlns="http://www.w3.org/2000/svg">
+        <circle id="outer_circle" r="100" cy="100" cx="100" stroke-width="1" stroke="#000" fill="none"/>
+        <path d="M50 110 A 35 35, 1, 0, 0, 150 110" stroke-width="1" stroke="#000" fill="none" />
+        <circle id="left_eye" r="10" cy="65" cx="60" stroke-width="1" stroke="#000" fill="none"/>
+        <circle id="right_eye" r="10" cy="65" cx="140" stroke-width="1" stroke="#000" fill="none"/>
+      </svg>
+    </div>
+    <script src="https://gist.github.com/3916296.js?file=SVG"></script>
+  </section>
+  <section>
+    <h1>Audio &amp; Video</h1>
+    <div class="left_block">
+      <h3>Dramatic Chipmunk</h3>
+      <video controls preload width=400px height=300px>
+        <source src="media/dramatic_chipmunk.ogv" type="video/ogg">
+        <source src="media/dramatic_chipmunk.mp4" type="video/mpeg">
+        You do not have HTML5 Video support.
+      </video>
+
+      <h3>Inconceivable</h3>
+      <audio controls>
+        <source src="media/thatword.ogg" type="audio/ogg">
+        <source src="media/thatword.mp3" type="audio/mpeg">
+        Your browser does not support the audio tag.
+      </audio>
+    </div>
+    <script src="https://gist.github.com/3916296.js?file=Audio Video"></script>
+  </section>
+  <section>
+    <h1>Native Drag &amp; Drop</h1>
+    <div class="left_block">
+      <p>
+        The new specification allow for drag and drop events to be handled natively in the browser.
+        The only addition to the mark-up is set ( draggable="true" ).  The interesting part 
+        is contained in the JavaScript.
+      </p>
+      <div class="peg_box group">
+        <div class="circle" draggable="true"></div>
+        <div class="square" draggable="true"></div>
+        <div class="rect" draggable="true"></div>
+      </div>
+      <div class="hole_box group">
+        <div class="rect"></div>
+        <div class="circle"></div>
+        <div class="square"></div>
+      </div>
+    </div>
+    <script src="https://gist.github.com/3916296.js?file=Drag n Drop"></script>
+  </section>
+  <section>
+    <h1>GeoLocation</h1>
+    <div class="left_block">
+      <p>Geolocation is able to find the user’s exact location. 
+        It has many uses from finding nearby businesses to routes to destinations.  
+        This simple example will merely show you your own position.</p>
+      <button onclick="tryGeoLocate();">Try Geolocate!</button>
+      <br/>
+      <div id="map_canvas"></div>
+    </div>
+    <script src="https://gist.github.com/4001843.js?file=Geolocate.js"></script>
+  </section>
+  <section>
+    <h1>Editable Content with Local Storage</h1>
+    <div class="left_block">
+      <p>Set the contenteditable to true like so, ( contenteditable=true )</code> and you can freely change the content.  
+        Additionally, with local storage your edits can be preserved.</p>
+      <article class="editable" contenteditable="true">
+        <h3>Headline tags can be edited</h3>
+        <p>You can edit paragraph tags</p>
+        <ul>
+          <li>List items...</li>
+          <li>you guessed it</li>
+          <li>they can be edited too!</li>
+        </ul>
+        <p>
+          And with local storage your edit will be preserved even if you navigate away from the page
+          or close the browser.  The reset button will let you return things to the way they once were.
+        </p>
+      </article>
+      <button class="reset">Reset</button>
+    </div>
+    <script src="https://gist.github.com/4001843.js?file=Editable Content.js"></script>
+  </section>
+  <section>
+  </section>
+</body>
+</html>

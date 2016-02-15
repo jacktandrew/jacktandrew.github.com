@@ -1,0 +1,76 @@
+body {margin: 0px; padding: 10px; background: #4F250F; font-family: garamond; color: #444; line-height: 133%;}
+#new_wrapper {margin: 5px auto; background: #fdf9d6; width: 1000px; padding: 0 0 15px;}
+a {text-decoration: none; color: #444;}
+p {text-indent: 25px; margin: 20px 0;}
+li, ul {list-style-type: none; margin: 3px 0 0 0; padding: 0;}
+h1, h2, h3 {font-family: arial;}
+h4 {font-weight: normal;}
+h1, h2, h3, h4, .company, .ingredient, .produce {color: #333;}
+
+.group:before, .group:after {content:""; display:table;}
+.group:after {clear:both;}
+.quote, .caption {color: #222;}
+.quote, .caption, #supplier_map_canvas, .supplier_list a:hover {border: 1px dashed #333; background: #CCC9AD;}
+.infowindow a:hover {background: #CCC9AD;}
+
+.quote {font-size: 1.05em; font-style: italic; display: block; padding: 10px 15px; 
+  width: 450px; line-height: 150%; text-align: center;}
+.caption {margin: 100px 0 0 0; padding: 15px;}
+.caption h4 {margin:0 10px;}
+
+#farm_wrapper, #sup_text_wrapper, #kitchen_wrapper {margin: 0 0 20px 75px;}
+#sup_text, .supplier_list, #kitchen_list {float: left;}
+#kitchen_text, #kitchen_list, #farm_text, #sup_text, .supplier_list {margin: 0 10px; width: 475px;}
+
+#header h3 {color: #4F250F; margin: 0px 40px;}
+#logo {width: 200px; margin: -10px 50px 0px 0px;}
+#page_name {float: left; margin: 50px 0 0 50px;}
+#sup_pics {float: left; width: 310px; margin: 85px 0 0 60px;}
+#sup_pics .caption .nivoSlider img {width: 275px;}
+
+#kitchen_pics {width: 350px; float: left; margin: -83px 0 0 45px;}
+#kitchen_pics img {width: 318px;}
+
+.supplier_list a {padding: 2px; border:1px dashed #FDF9D6;}
+	/*This border is the same color as the background so I cannot be seen
+	It holds the place so that when the hover state adds a black border the text is not moved*/
+.supplier_list h3 {margin: 12px 0px;}
+
+#supplier_map_canvas {float: left; margin: 45px 0px 0px 20px; padding: 15px;}
+
+.infowindow p {margin: 2px 0; text-indent: 15px;}
+.infowindow a {color: #3366BB; margin-left: 10px; padding: 1px 5px;}
+.infowindow H3 {margin: 5px; font-size: 1.1em;} 
+
+.company, .ingredient {font-weight: bold; font-size: 1em;}
+
+.city, #sup_text strong {font-style: italic;}
+.city, .produce {font-size: .95em;}
+	
+ul#location_side_bar > li:hover {border: 1px solid black;}
+#location_map_wrapper {margin: 8px 0 0 -16px; border: 1px dashed black; padding: 10px; 
+  float: left; background: #fff;}
+ul#location_side_bar {width: 550px; float: left; margin: 5px 15px 0 15px;}
+ul#location_side_bar > li {display: block; border: 1px dashed black; background: white;
+  margin: 3px 3px 3px 3px; width: 265px; height: 155px; float: left; position: relative;}
+
+ul#location_side_bar > li img {position: absolute; width: 80px;}
+ul#location_side_bar > li > img {margin: 20px 5px;}
+ul#location_side_bar > li a img {top: 85px;}
+
+ul#location_side_bar > li ul {margin: 14px 9px 14px 95px; font-size: 14px;}
+ul#location_side_bar > li ul li {margin: 1px; line-height: 124%;} 
+ul#location_side_bar > li ul li:first-child {font-weight: bold; font-size: 1.2em;} 
+ul#location_side_bar > li ul li div {height:20px; width: 20px; border-radius: 10px; 
+	float:right; margin: 0; padding: 0;}
+
+ul#location_side_bar ul div.wallingford {border:1px solid #00FF00; background: #a6ffa6;}
+ul#location_side_bar ul div.capitol     {border:1px solid #E100FF; background: #f5a6ff;}
+ul#location_side_bar ul div.queenanne   {border:1px solid #FFFF00; background: #ffffa6;}
+ul#location_side_bar ul div.slu         {border:1px solid #1100FF; background: #11a6ff;}
+ul#location_side_bar ul div.wedgwood    {border:1px solid #FF0000; background: #ffa6a6;}
+
+.bubble p {margin:0; padding:0; text-indent:0;}
+.bubble p:first-child {font-weight: bold; font-size: 1.1em;}
+.facade {height: 80px;}
+#footer {text-align: center; height: 50px;}

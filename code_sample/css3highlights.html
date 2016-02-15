@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+  <meta charset=utf-8>
+  <title>CSS3 Highlights</title>
+  <link rel="stylesheet" type="text/css" href="fonts/fonts.css">
+  <link rel="stylesheet" type="text/css" href="stylesheets/css3highlights.css">
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script src="js/css3.js"></script>
+</head>
+<body>
+  <h1>Highlights of CSS3</h1>  
+  <section class="text_shadow">
+    <h1>Text Shadow</h1>
+    <p class="descrip">Text Shadow works and is written just like Box Shadow:<br/> X-Offset, Y-Offset, Blur, and Color</p>
+    <p class="descrip">Some creations from <a href="http://www.midwinter-dg.com/permalink-7-great-css-based-text-effects-using-the-text-shadow-property_2011-03-03.html">midwinter-dg.com</a></p>
+    <div class="simple">
+      <h2>Simple Shadow</h2>
+      <pre>
+        
+.simple h2 {
+  text-shadow: 2px 3px 3px #333;
+  font-size: 80px;
+  color: #333;
+}</pre>
+    </div>
+    <div class="letterpress">
+      <h2>Press The Letters</h2>
+      <pre>
+        
+.letterpress h2 {
+  text-shadow: 0px 1px 1px #4d4d4d;
+  color: #222;
+  font-size: 80px;
+  font-family: 'league_gothicregular';
+}</pre>
+    </div>
+    <div class="cloud9">
+      <h2>Hazy Days</h2>
+      <pre>.cloud9 h2 {
+  color: rgba(255,255,255,0); 
+  font: 70px 'chunkfiveregular'; 
+  text-shadow: 
+    0px 0px 10px rgba(255,255,255,0.6), 
+    0px 0px 30px rgba(255,255,255,0.4), 
+    0px 0px 50px rgba(255,255,255,0.3), 
+    0px 0px 180px rgba(255,255,255,0.3);
+}</pre>
+    </div>
+    <div class="embossed">
+      <h2>Like an Emboss</h2>
+      <pre>.embossed h2 {
+  text-shadow: 
+    -1px -1px 1px #fff, 
+    1px 1px 1px #000; 
+  color: #cdb06b; opacity: 0.3; 
+  font: 80px 'museo_700regular';
+}</pre>
+    </div>
+    <div class="citylights">
+      <h2>Gotham City</h2>
+      <pre>.citylights h2 {
+  vcolor: #fff; 
+  letter-spacing: 5px; 
+  font: 80px 'misoregular';
+  text-shadow: 
+    0 0 5px #fff, 0 0 10px #fff, 
+    0 0 15px #fff, 0 0 20px #ff2d95, 
+    0 0 30px #ff2d95, 0 0 40px #ff2d95, 
+    0 0 50px #ff2d95, 0 0 75px #ff2d95;
+}</pre>
+    </div>
+    <div class="burning">
+      <h2>Havin&apos; a Fire Sale</h2>
+      <pre>.burning h2 {
+  color: #fff; 
+  font: 80px 'blackjackregular'; 
+  text-shadow: 
+    0px -1px 4px white, 
+    0px -2px 10px yellow, 
+    0px -10px 20px #ff8000, 
+    0px -18px 40px red;
+}</pre>
+    </div>
+    <div class="retro">
+      <h2> ★ So Retro  ★ </h2>
+      <pre>.retro h2 {
+  color: #d7ceb2; 
+  text-shadow: 
+    3px 3px 0px #2c2e38, 
+    5px 5px 0px #5c5f72; 
+  font: 80px 'bazarmedium'; 
+  letter-spacing: 10px;
+}</pre>
+    </div>
+    <div class="three-d">
+      <h2>Now in 3-D</h2>
+      <pre>.three-d h2 {
+  color: #fff; 
+  font: 80px 'chunkfiveregular';
+  text-shadow: 
+    0px 1px 0px #999, 0px 2px 0px #888, 
+    0px 3px 0px #777, 0px 4px 0px #666, 
+    0px 5px 0px #555, 0px 6px 0px #444, 
+    0px 7px 0px #333, 0px 8px 7px #013;
+}</pre>
+    </div>
+  </section>  <!-- .text_shadow -->
+  <section>
+    <p class="descrip">Below is the code for the CSS3 Transitions a that reveal the code on roll-over.<p>
+    <div class="code_box">
+        <pre>
+  .text_shadow div:hover h2 {font-size: 0; opacity: 0;}
+  .text_shadow div:hover pre {height: 100%; opacity: 1;}
+  .text_shadow h2, .text_shadow div:hover h2, 
+  .text_shadow pre, .text_shadow div:hover pre {	
+  	transition: 
+  	  height 2.5s ease-out 0.4s, 
+  	  opacity .9s ease-out 0.7s, 
+  	  font-size 0.8s ease-out 0.4s;
+  }        
+        </pre>
+    </div>
+  </section>
+  <section class="colors">
+    <h1>Colors - rgba()</h1>
+    <p class="descrip">The best way to create an opaque colors is<br/> rgba (Red, Green, Blue, Alpha).</p>
+    <p class="descrip">Hover over one of the colors on the swatch to the reveal it&apos; code</p>
+<div class="color_wrapper group">
+  <div class="color_swatch rgba">
+    <div class="opacity_10">
+      <pre>
+.opacity_10 {
+  background: rgba(255,0,0,0.1);
+  color: rgba(0,0,255,0.1);
+}</pre>
+    </div>
+    <div class="opacity_20">
+      <pre>
+.opacity_20 {
+  background: rgba(255,0,0,0.2);
+  color: rgba(0,0,255,0.2);
+}</pre>
+    </div>
+    <div class="opacity_30">
+      <pre>
+.opacity_30 {
+  background: rgba(255,0,0,0.3);
+  color: rgba(0,0,255,0.3);
+}</pre>
+    </div>
+    <div class="opacity_40">
+      <pre>
+.opacity_40 {
+  background: rgba(255,0,0,0.4);
+  color: rgba(0,0,255,0.4);
+}</pre>
+    </div>
+    <div class="opacity_50">
+      <pre>
+.opacity_50 {
+  background: rgba(255,0,0,0.5);
+  color: rgba(0,0,255,0.5);
+}</pre>
+    </div>
+    <div class="opacity_60">
+      <pre>
+.opacity_60 {
+  background: rgba(255,0,0,0.6);
+  color: rgba(0,0,255,0.6);
+}</pre>
+    </div>
+    <div class="opacity_70">
+      <pre>
+.opacity_70 {
+  background: rgba(255,0,0,0.7);
+  color: rgba(0,0,255,0.7);
+}</pre>
+    </div>
+    <div class="opacity_80">
+      <pre>
+.opacity_80 {
+  background: rgba(255,0,0,0.8);
+  color: rgba(0,0,255,0.8);
+}</pre>
+    </div>
+    <div class="opacity_90">
+      <pre>
+.opacity_90 {
+  background: rgba(255,0,0,0.9);
+  color: rgba(0,0,255,0.9);
+}</pre>
+    </div>
+    <div class="opacity_100">
+      <pre>
+.opacity_100 {
+  background: rgba(255,0,0,1);
+  color: rgba(0,0,255,1);
+}</pre>
+    </div>
+  </div>  <!-- .color_swatch -->
+</div>  <!-- .color_wrapper  -->
+
+
+    <p class="descrip">The accordion effect is created purely with CSS3</p>
+    <div class="two_code_blocks">
+      <pre>.colors {width: 100%;}
+.color_wrapper {
+  font-size: 1.4em; 
+  width: 80%; 
+  margin: 5%;
+}
+.color_swatch div {
+  width: 10%; 
+  padding: 5% 0; 
+  float: left;
+}
+.color_swatch pre {
+  width: 0; 
+  overflow: hidden; 
+  padding-left: 20%;
+}
+.color_swatch:hover div {width: 5%;}
+.color_swatch div:hover {width: 55%;}
+.color_swatch div:hover pre {width: 100%;}
+.color_swatch div, .color_swatch pre {
+  -webkit-transition: all 1s linear;
+  -moz-transition: all 1s linear;
+  -o-transition: all 1s linear;
+  transition: all 1s linear;
+}</pre>
+      <pre>&lt;div class="color_wrapper group"&gt;
+  &lt;div class="color_swatch rgba"&gt;
+    &lt;div class="opacity_10"&gt;&lt;pre&gt;&hellip;&lt;/pre&gt;&lt;/div&gt;
+    &lt;div class="opacity_20"&gt;&lt;pre&gt;&hellip;&lt;/pre&gt;&lt;/div&gt;
+    &lt;div class="opacity_30"&gt;&lt;pre&gt;&hellip;&lt;/pre&gt;&lt;/div&gt;
+    &lt;div class="opacity_40"&gt;&lt;pre&gt;&hellip;&lt;/pre&gt;&lt;/div&gt;
+    &lt;div class="opacity_50"&gt;&lt;pre&gt;&hellip;&lt;/pre&gt;&lt;/div&gt;
+    &lt;div class="opacity_60"&gt;&lt;pre&gt;&hellip;&lt;/pre&gt;&lt;/div&gt;
+    &lt;div class="opacity_70"&gt;&lt;pre&gt;&hellip;&lt;/pre&gt;&lt;/div&gt;
+    &lt;div class="opacity_80"&gt;&lt;pre&gt;&hellip;&lt;/pre&gt;&lt;/div&gt;
+    &lt;div class="opacity_90"&gt;&lt;pre&gt;&hellip;&lt;/pre&gt;&lt;/div&gt;
+    &lt;div class="opacity_100"&gt;&lt;pre&gt;&hellip;&lt;/pre&gt;&lt;/div&gt;
+  &lt;/div&gt;  &lt;!-- .color_swatch --&gt;
+&lt;/div&gt;  &lt;!-- .color_wrapper  --&gt;</pre>
+    </div>  <!-- .two_code_blocks  -->
+  </section>  <!-- . -->
+  <section class="transitions">
+    <h1>Transitions</h1>
+    <p class="descrip">
+      Transitions can smooth out what would otherwise be abrupt changes.  The code can take 4 parameters:
+      <ol>
+        <li>'transition property' which specifies the property effected</li> 
+        <li>'transition-duration' which states the length in seconds</li>
+        <li>'transition timing function' which can alter the pace of change</li>
+        <li>'transition delay'  which delays the the implementation</li>
+      </ol>
+    </p>
+    <div class="floater">
+      <p class="descrip">
+        A great demonstration of the various easing speeds available in CSS3 from 
+        <a href="http://css3.bradshawenterprises.com/transitions/">http://css3.bradshawenterprises.com/transitions/</a>.
+      </p>
+      <p class="descrip">Hover over the box to see the transition events, click on a ball or square to see the code the makes it work.</p>
+
+    <div class="timings_demo">
+        <span class="code_box">
+              <pre id="ease">
+        .ease {
+          -webkit-transition: all 4s ease;
+          -moz-transition: all 4s ease;
+          -o-transition: all 4s ease;
+          transition: all 4s ease;    
+          background: #f00;
+        }
+              </pre>
+              <pre id="ease-in">
+        .ease-in {
+          -webkit-transition: all 4s ease-in;
+          -moz-transition: all 4s ease-in;
+          -o-transition: all 4s ease-in;
+          transition: all 4s ease-in;    
+          background: #0f0;
+        }
+              </pre>
+              <pre id="ease-out">
+        .ease-out {
+          -webkit-transition: all 4s ease-out;
+          -moz-transition: all 4s ease-out;
+          -o-transition: all 4s ease-out;
+          transition: all 4s ease-out;    
+          background: #00f;
+        }
+              </pre>
+              <pre id="ease-in-out">
+        .ease-in-out {
+          -webkit-transition: all 4s ease-in-out;
+          -moz-transition: all 4s ease-in-out;
+          -o-transition: all 4s ease-in-out;
+          transition: all 4s ease-in-out;    
+          background: #ff0;
+        }
+              </pre>
+              <pre id="linear">
+        .linear {
+          -webkit-transition: all 4s linear;
+          -moz-transition: all 4s linear;
+          -o-transition: all 4s linear;
+          transition: all 4s linear;    
+          background: #f0f;
+        }
+              </pre>
+              <pre id="custom">
+        .custom {
+          -webkit-transition: all 4s 
+            cubic-bezier(1.000, 0.835, 0.000, 0.945);
+          -moz-transition: all 4s 
+            cubic-bezier(1.000, 0.835, 0.000, 0.945);
+          -o-transition: all 4s 
+            cubic-bezier(1.000, 0.835, 0.000, 0.945);
+          transition: all 4s 
+            cubic-bezier(1.000, 0.835, 0.000, 0.945);    
+          background: #0ff;
+        }
+              </pre>
+              <pre id="negative">
+        .negative {
+          -webkit-transition: all 4s 
+            cubic-bezier(1.000, -0.530, 0.405, 1.425);
+          -moz-transition: all 4s 
+            cubic-bezier(1.000, -0.530, 0.405, 1.425);
+          -o-transition: all 4s 
+            cubic-bezier(1.000, -0.530, 0.405, 1.425);
+          transition: all 4s 
+            cubic-bezier(1.000, -0.530, 0.405, 1.425);    
+          background: #000;
+          color: white;
+        }
+              </pre>
+        </span>  <!-- .code_box -->  
+        <div class="ease"><a href="#ease">Ease</a></div>
+        <div class="ease-in"><a href="#ease-in">Ease<br>In</a></div>
+        <div class="ease-out"><a href="#ease-out">Ease<br>Out</a></div>
+        <div class="ease-in-out"><a href="#ease-in-out">Ease<br>In Out</a></div>
+        <div class="linear"><a href="#linear">Linear</a></div>
+        <div class="custom"><a href="#custom">Custom</a></div>
+        <div class="negative"><a href="#negative">Rad!</a></div>
+      </div>  <!-- .timing_demo -->
+    </div>  <!-- .floater -->
+    <div class="floater">
+      <p class="descrip">A simple implementation with images using the same code and concepts.</p>
+      <p class="descrip">Hover over the pool table to for the balls to move</p>
+      <div class="pool_table">
+        <div class="ball"><span>1</span></div>
+        <div class="ball"><span>2</span></div>  
+        <div class="ball"><span>3</span></div>
+        <div class="ball"><span>4</span></div>
+        <div class="ball"><span>5</span></div>
+        <div class="ball"><span>6</span></div>
+        <div class="ball"><span>7</span></div>
+        <div class="ball"><span>8</span></div>  
+        <div class="ball"><span>9</span></div>
+        <div class="ball"><span>10</span></div>
+        <div class="ball"><span>11</span></div>
+        <div class="ball"><span>12</span></div>
+        <div class="ball"><span>13</span></div>
+        <div class="ball"><span>14</span></div>
+        <div class="ball"><span>15</span></div>
+
+        <div class="hole"></div>
+        <div class="hole"></div>
+        <div class="hole"></div>
+        <div class="hole"></div>
+      </div>  <!-- .pool_table -->
+    </div>  <!-- .floater -->
+  </section>  <!-- transitions -->
+  <section class="animations">
+    <h1>Animations</h1>
+      <div class="example floater">
+        <p class="descrip">Animations allow specific changes to happen and specific times.  In the example below I&apos;ve manually guided the balls around the table to mimic an a pool shot.</p>
+        <p class="descrip">Hover over the pool table to for the balls to move</p>
+        <div class="pool_table">
+      
+          <div class="ani_ball"></div>
+          <div class="ani_ball"></div>
+          <div class="ani_ball cue"></div>
+            
+          <div class="holes">
+            <div class="hole"></div>
+            <div class="hole"></div>
+            <div class="hole"></div>
+            <div class="hole"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sample_code floater">
+        <p class="descrip">Below is my code, I've omitted the vendor prefixes for the sake of brevity but remember to include all of them in your code.</p>
+        <pre>
+.animations .pool_table:hover .cue.ani_ball {
+	animation: ballcue 5s linear; 
+}
+.animations .pool_table:hover .ani_ball:nth-child(1) {
+	animation: ball1 5s linear; 
+}
+.animations .pool_table:hover .ani_ball:nth-child(2) {
+	animation: ball2 5s linear; 
+}
+@keyframes ball1 {
+	0%   {top: 70px;  left: 225px; transform: rotate(0deg);}
+	9%   {top: 70px;  left: 225px; transform: rotate(0deg);}
+	15%  {top: -8px;  left: 140px; transform: rotate(80deg);}
+	25%  {top: 140px; left: -9px;  transform: rotate(180deg);}
+	40%  {top: 430px; left: 200px; transform: rotate(480deg);}
+	80%  {top: -10px; left: 475px; transform: rotate(1280deg);}
+	100% {top: -10px; left: 475px; transform: rotate(1280deg);}
+}
+@keyframes ball2 {
+	0%   {top: 110px; left: 270px; transform: rotate(0deg);}
+	9%   {top: 110px; left: 270px; transform: rotate(0deg);}
+	15%  {top: -8px;  left: 320px; transform: rotate(80deg);}
+	50%  {top: 440px; left: 475px; transform: rotate(880deg);}
+	100% {top: 440px; left: 475px; transform: rotate(880deg);}
+}
+@keyframes ballcue {
+	0%   {top: 400px; left: 240px; transform: rotate(0deg);}
+	10%  {top: 145px; left: 250px; transform: rotate(180deg);}
+	60%  {top: 320px; left: 405px; transform: rotate(300deg);}
+	65%  {top: 330px; left: 415px; transform: rotate(310deg);}
+	70%  {top: 340px; left: 425px; transform: rotate(320deg);}
+	100% {top: 340px; left: 425px; transform: rotate(320deg);}
+}
+        </pre>
+      </div>
+  </section>  <!-- .animations -->
+  <section class="transformations">
+    <h1>Transformations</h1>
+    <p class="descrip">CSS3 allows both 2D and 3D transformations and making things as unique as a 3D rather simple and straight forward.  I learned to create the box below from reading a blog post at <a href="http://www.paulrhayes.com/2009-07/animated-css3-cube-interface-using-3d-transforms/">http://www.paulrhayes.com/2009-07/animated-css3-cube-interface-using-3d-transforms/</a></p>
+    <p class="descrip">Use your mouse or the arrow keys to manipulate the cube.</p>
+    
+    <div id="experiment">
+      <div id="cube">
+        <div>
+          <pre>
+  #experiment {
+  	width: 800px; 
+  	margin: 100px auto;
+  	-webkit-perspective: 800;
+  	-webkit-perspective-origin: 
+  	  50% 200px;
+  }
+          </pre>
+        </div>
+        <div>
+          <pre>
+  #cube {
+  	position: relative;
+  	margin: 0 auto;
+  	height: 400px;
+  	width: 400px;
+  	-webkit-transition: 
+  	  -webkit-transform 2s linear;
+  	-webkit-transform-style: 
+  	  preserve-3d;
+  }
+          </pre>
+        </div>
+        <div>
+          <pre>
+  #cube > div {
+  	position: absolute;
+  	height: 360px;
+  	width: 360px;
+  	padding: 20px;
+  	border: 
+  	  1px solid #555;
+  	background-color: 
+  	  rgba(50, 50, 50, 0.7);
+  }
+          </pre>
+        </div>
+        <div>
+          <pre>
+  #cube > div:first-child  {
+  	-webkit-transform: 
+  	  rotateX(90deg) 
+  	  translateZ(200px);
+  	-moz-transform: 
+  	  rotateX(90deg) 
+  	  translateZ(200px);
+  }
+  
+  #cube > div:nth-child(2) {
+  	-webkit-transform: 
+  	  translateZ(200px);
+  	-moz-transform: 
+  	  translateZ(200px);
+  }
+          </pre>
+        </div>
+        <div>
+          <pre>
+  #cube > div:nth-child(3) {
+  	-webkit-transform: 
+  	  rotateY(90deg) 
+  	  translateZ(200px);
+	  
+  	-moz-transform: 
+  	  rotateY(90deg) 
+  	  translateZ(200px);
+  }
+
+  #cube > div:nth-child(4) {
+  	-webkit-transform: 
+  	  rotateY(180deg) 
+  	  translateZ(200px);
+	  
+  	-moz-transform: 
+  	  rotateY(180deg) 
+  	  translateZ(200px);
+  }
+          </pre>
+        </div>
+        <div>
+          <pre>
+#cube > div:nth-child(5) {
+	-webkit-transform: 
+	  rotateY(-90deg) 
+	  translateZ(200px);
+	-moz-transform: 
+	  rotateY(-90deg) 
+	  translateZ(200px);
+}
+
+#cube > div:nth-child(6) {
+	-webkit-transform: 
+	  rotateX(-90deg) 
+	  rotate(180deg) 
+	  translateZ(200px);
+	-moz-transform: 
+	  rotateX(-90deg) 
+	  rotate(180deg) 
+	  translateZ(200px);
+}
+          </pre>
+        </div>
+      </div>
+    </div>
+    <script>
+      var xAngle = 0, yAngle = 0;
+        document.addEventListener('keydown', function(e) {
+          switch(e.keyCode){
+            case 37: // left
+            yAngle -= 45;
+            break;
+
+            case 38: // up
+            xAngle += 45;
+            break;
+
+            case 39: // right
+            yAngle += 45;
+            break;
+
+            case 40: // down
+            xAngle -= 45;
+            break;
+          };
+          document.getElementById('cube').style.webkitTransform = "rotateX("+xAngle+"deg) rotateY("+yAngle+"deg)";
+          document.getElementById('cube').style.moTransform = "rotateX("+xAngle+"deg) rotateY("+yAngle+"deg)";
+        }, false);
+    </script>
+  </section>
+  <section class="transform_animations group">
+    <h1>Transform + Animations</h1>
+      <ul class="spinners">
+        <li class="active">
+          <div class="two_arrows">
+            <div class="outer_circle">
+              <div class="inner_circle"></div>
+              <div class="circle_break">
+                <div class="arrow_head"></div>
+                <div class="arrow_head"></div>
+              </div>
+            </div>
+          </div>
+          <script src="https://gist.github.com/3990945.js?file=Arrows"></script>
+        </li>
+        <li>
+          <div class="ball_in_circle_wrap">
+            <div class="circle">
+              <div class="ball"></div>
+              <div class="hub"></div>
+            </div>
+          </div>
+          <script src="https://gist.github.com/3990945.js?file=Clock"></script>
+        </li>
+        <li>
+          <div class="clock_spinner">
+            <div></div>   <div></div>   <div></div>
+            <div></div>   <div></div>   <div></div>
+            <div></div>   <div></div>   <div></div>
+            <div></div>   <div></div>   <div></div>
+          </div>
+          <script src="https://gist.github.com/3990945.js?file=Ball in Circle"></script>
+        </li>
+        <li>
+          <div class="eight_ball">
+            <div></div>   <div></div>
+            <div></div>   <div></div>
+            <div></div>   <div></div>
+            <div></div>   <div></div>
+          </div>
+          <script src="https://gist.github.com/3990945.js?file=Eight Ball"></script>
+        </li>
+      </ul>
+  </section>
+  <footer>
+  </footer>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

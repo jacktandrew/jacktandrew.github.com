@@ -1,0 +1,35 @@
+/* a */
+.opacity:nth-child(1) div {background: hsla(255, 100%, 100%, 0.1); color: hsla(255, 100%, 100%, 0.1);}
+.opacity:nth-child(2) div {background: hsla(255, 100%, 100%, 0.2); color: hsla(255, 100%, 100%, 0.2);}
+.opacity:nth-child(3) div {background: hsla(255, 100%, 100%, 0.3); color: hsla(255, 100%, 100%, 0.3);}
+.opacity:nth-child(4) div {background: hsla(255, 100%, 100%, 0.4); color: hsla(255, 100%, 100%, 0.4);}
+.opacity:nth-child(5) div {background: hsla(255, 100%, 100%, 0.5); color: hsla(255, 100%, 100%, 0.5);}
+.opacity:nth-child(6) div {background: hsla(255, 100%, 100%, 0.6); color: hsla(255, 100%, 100%, 0.6);}
+.opacity:nth-child(7) div {background: hsla(255, 100%, 100%, 0.7); color: hsla(255, 100%, 100%, 0.7);}
+.opacity:nth-child(8) div {background: hsla(255, 100%, 100%, 0.8); color: hsla(255, 100%, 100%, 0.8);}
+.opacity:nth-child(9) div {background: hsla(255, 100%, 100%, 0.9); color: hsla(255, 100%, 100%, 0.9);}
+.opacity:nth-child(10) div {background: hsla(255, 100%, 100%, 1); color: hsla(255, 100%, 100%, 1);}
+
+/* s */
+.saturation:nth-child(1) div {background: hsla(255, 10%, 100%, 1); color: hsla(100, 10%, 100%, 1);}
+.saturation:nth-child(2) div {background: hsla(255, 20%, 100%, 1); color: hsla(100, 20%, 100%, 1);}
+.saturation:nth-child(3) div {background: hsla(255, 30%, 100%, 1); color: hsla(100, 30%, 100%, 1);}
+.saturation:nth-child(4) div {background: hsla(255, 40%, 100%, 1); color: hsla(100, 40%, 100%, 1);}
+.saturation:nth-child(5) div {background: hsla(255, 50%, 100%, 1); color: hsla(100, 50%, 100%, 1);}
+.saturation:nth-child(6) div {background: hsla(255, 60%, 100%, 1); color: hsla(100, 60%, 100%, 1);}
+.saturation:nth-child(7) div {background: hsla(255, 70%, 100%, 1); color: hsla(100, 70%, 100%, 1);}
+.saturation:nth-child(8) div {background: hsla(255, 80%, 100%, 1); color: hsla(100, 80%, 100%, 1);}
+.saturation:nth-child(9) div {background: hsla(255, 90%, 100%, 1); color: hsla(100, 90%, 100%, 1);}
+.saturation:nth-child(10) div {background: hsla(255, 100%, 100%, 1); color: hsla(100, 100%, 100%, 1);}
+
+/* l */
+.lightness:nth-child(1) div {background: hsla(255, 100%, 10%, 1); color: hsla(100, 100%, 10%, 1);}
+.lightness:nth-child(2) div {background: hsla(255, 100%, 20%, 1); color: hsla(100, 100%, 20%, 1);}
+.lightness:nth-child(3) div {background: hsla(255, 100%, 30%, 1); color: hsla(100, 100%, 30%, 1);}
+.lightness:nth-child(4) div {background: hsla(255, 100%, 40%, 1); color: hsla(100, 100%, 40%, 1);}
+.lightness:nth-child(5) div {background: hsla(255, 100%, 50%, 1); color: hsla(100, 100%, 50%, 1);}
+.lightness:nth-child(6) div {background: hsla(255, 100%, 60%, 1); color: hsla(100, 100%, 60%, 1);}
+.lightness:nth-child(7) div {background: hsla(255, 100%, 70%, 1); color: hsla(100, 100%, 70%, 1);}
+.lightness:nth-child(8) div {background: hsla(255, 100%, 80%, 1); color: hsla(100, 100%, 80%, 1);}
+.lightness:nth-child(9) div {background: hsla(255, 100%, 90%, 1); color: hsla(100, 100%, 90%, 1);}
+.lightness:nth-child(10) div {background: hsla(255, 100%, 100%, 1); color: hsla(100, 100%, 100%, 1);}
