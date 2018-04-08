@@ -28,6 +28,7 @@
   <script src="scripts/dominos.js"></script>
   <script src="scripts/portfolio.js"></script>
 
+  <link href="stylesheets/checkers.css" rel="stylesheet">
   <link rel="stylesheet" href="stylesheets/style.css" type="text/css" media="all" />
   <link rel="stylesheet" href="stylesheets/jquery.lightbox-0.5.css" type="text/css" media="screen" />
 
@@ -256,7 +257,7 @@
   <section id="code">
     <h1>Code</h1>
     <div class="squares">
-<!--
+      <!--
       <div>
 
         <img src="images/dominos.png" />
@@ -266,7 +267,7 @@
           <a href="code_sample/dominos.html" target="_blank">See the example and code</a>
         </p>
       </div>
--->
+      -->
       <div>
         <h2>HTML5</h2>
         <img src="images/html5summary.png">
@@ -291,7 +292,7 @@
   <section id="game">
     <div class="threes group">
       <h1>Games</h1>
-      <h1>Threes or Tripes</h1>
+      <h2>Threes / Tripes</h2>
       <h5>Threes is a simple game of chance.  The rule are as follows:</h5>
       <ul id="threes_rules">
         <li>A three is worth zero point</li>
@@ -365,6 +366,20 @@
         </div>
       </div>
     </div>  <!-- end .threes -->
+    <div id="checkers">
+      <h2>Checkers</h2>
+      <h5>A strategy board games for two players. The rule are as follows:</h5>
+      <ul class="rules">
+        <li>Pieces move diagonally left or right in one direction</li>
+        <li>Capture an opponets piece by jumping over opponent pieces</li>
+        <li>Capture is mandatory and other moves are unavailable when capture is possible</li>
+        <li>Pieces become kings when the reach the opposite side of the board</li>
+        <li>Kings are able to move in all four diagonal directions</li>
+        <li>Victory is achieved when you capture all your opponent's pieces</li>
+      </ul>
+
+      <div id="app"></div>
+    </div>
   </section>  <!-- end #game -->
 
   <section id="tool">
@@ -547,5 +562,6 @@
     </nav>
   </footer>
 </section>  <!-- end #resume -->
+<script src="scripts/checkers.js"></script>
 </body>
 </html>

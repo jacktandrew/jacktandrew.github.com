@@ -238,6 +238,13 @@ section h1 {margin: 40px 0px 20px;}
 .squares .text-square:hover p, .squares .text-square:hover img {display: block; opacity: 1;}
 #code .text-square p, #work .text-square p {left: -50px; top: -50px; height: 250px; width: 266px; color: #fff; font-size: 20px; line-height: 24px;}
 
+#game h2 {
+  margin: 40px 0px 20px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #444;
+}
+
 div#game.division ul#threes_rules {margin: 10px;}
 div#game.division ul#threes_rules li {list-style-type: circle; text-indent: 5px; margin-left: 25px;}
 .red {background: gray; opacity: .5; pointer-events: none; cursor: default;}
