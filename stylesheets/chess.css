@@ -1,0 +1,161 @@
+.square::before {
+  position: absolute;
+  left: 40%;
+}
+
+.square::after {
+  position: absolute;
+  top: 40%;
+}
+
+.a8::before, .b8::before, .c8::before, .d8::before, .e8::before,
+.f8::before, .g8::before, .h8::before { top: -1.75rem; }
+
+.a1::before, .b1::before, .c1::before, .d1::before, .e1::before,
+.f1::before, .g1::before, .h1::before { bottom: -1.75rem; }
+
+.a1::after, .a2::after, .a3::after, .a4::after, .a5::after,
+.a6::after, .a7::after, .a8::after { left: -1.75rem; }
+
+.h1::after, .h2::after, .h3::after, .h4::after, .h5::after,
+.h6::after, .h7::after, .h8::after { right: -1.75rem; }
+
+.a8::before, .a1::before { content: "A"; }
+.b8::before, .b1::before { content: "B"; }
+.c8::before, .c1::before { content: "C"; }
+.d8::before, .d1::before { content: "D"; }
+.e8::before, .e1::before { content: "E"; }
+.f8::before, .f1::before { content: "F"; }
+.g8::before, .g1::before { content: "G"; }
+.h8::before, .h1::before { content: "H"; }
+
+.a1::after, .h1::after { content: "1"; }
+.a2::after, .h2::after { content: "2"; }
+.a3::after, .h3::after { content: "3"; }
+.a4::after, .h4::after { content: "4"; }
+.a5::after, .h5::after { content: "5"; }
+.a6::after, .h6::after { content: "6"; }
+.a7::after, .h7::after { content: "7"; }
+.a8::after, .h8::after { content: "8"; }
+
+#chess .log { display: none }
+
+#chess .board {
+  margin: 0 2rem 0;
+  float: left;
+}
+
+#chess .square {
+  width: 5rem;
+  height: 5rem;
+  border: 5px solid lemonchiffon;
+  float: left;
+  position: relative;
+  background-color: lemonchiffon;
+}
+
+#chess .square * { pointer-events: none; }
+
+#chess .square .man { position: absolute; }
+
+#chess .man i {
+  pointer-events: none;
+  position: absolute;
+  font-style: normal;
+}
+
+#chess .man.white .mask { color: black; }
+.man.black .mask { display: none; }
+
+#chess .square.black {
+  background-color: green;
+  border-color: green;
+}
+
+#chess .square.active { border: 5px inset darkorange; }
+#chess .square.threatened { border: 5px inset yellow; }
+
+#chess .man.white { color: #EEE; }
+#chess .man.active { color: darkorange; }
+
+#chess aside .man {
+  margin: 0.5rem;
+  width: 5rem;
+  height: 5rem;
+}
+
+#chess .modal .board {
+  opacity: 0.1;
+  pointer-events: none;
+}
+
+#chess aside {
+  font-size: 4rem;
+  display: -webkit-box;
+  position: absolute;
+  left: 13rem; top: 22rem;
+}
+
+#chess .man {
+  font-size: 5rem;
+  line-height: 1em;
+}
+
+#chess header h2 { margin: 0.5rem 0 }
+#chess .historic_games { margin: 1rem 3rem }
+#chess .historic_games li { margin: 0.5rem 0 }
+
+#chess li {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  padding: 1px 7px 2px;
+}
+
+#chess li.focus {
+  outline: auto 2px Highlight;
+  outline: auto 5px -webkit-focus-ring-color;
+}
+
+#chess li a { margin-left: 5px; }
+
+#chess button {
+  position: relative;
+  border: 2px solid #333;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  margin: 0 1rem 0 0;
+  overflow: hidden;
+}
+
+#chess button span {
+  pointer-events: none;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+#chess button .triangle {
+  margin: -7px -6px;
+  z-index: 1;
+  height: 0;
+  width: 0;
+  border-style: solid;
+  border-width: 8px 16px;
+  border-color: transparent transparent transparent #333;
+}
+
+#chess button:hover { opacity: 0.5 }
+#chess button:focus { outline: none }
+#chess button.reset { border-color: red }
+#chess button.reset span {
+  display: block;
+  width: 0.8rem;
+  height: 0.8rem;
+  margin: -0.4rem;
+  background-color: red;
+}
+
+#chess label.auto_play { margin: 0 1rem 0 5rem }

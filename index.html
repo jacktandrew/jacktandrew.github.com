@@ -29,6 +29,7 @@
   <script src="scripts/portfolio.js"></script>
 
   <link href="stylesheets/checkers.css" rel="stylesheet">
+  <link href="stylesheets/chess.css" rel="stylesheet">
   <link rel="stylesheet" href="stylesheets/style.css" type="text/css" media="all" />
   <link rel="stylesheet" href="stylesheets/jquery.lightbox-0.5.css" type="text/css" media="screen" />
 
@@ -380,6 +381,44 @@
 
       <div id="app"></div>
     </div>
+    <section id="chess">
+      <header>
+        <h2>Chess</h2>
+        <h4>
+          <a href="https://en.wikipedia.org/wiki/Chess">Chess</a> is a two-player strategy board game, the objective is to put your opponents king in checkmate.
+        </h4>
+        <h4>You can play yourself or watch one of the following historic match be replayed</h4>
+        <ul class="historic_games">
+          <li>
+            <button class="play" data-game="anderssen_kieseritzky">
+              <span class="triangle"></span>
+            </button>
+            Immortal Game: Anderssen&mdash;Kieseritzky (1851)
+            <a href="https://en.wikipedia.org/wiki/Immortal_Game">Learn more</a>
+          </li>
+          <li>
+            <button class="play" data-game="byrne_fischer">
+              <span class="triangle"></span>
+            </button>
+            The Game of the Century: Byrne&mdash;Fischer (1956)
+            <a href="https://en.wikipedia.org/wiki/The_Game_of_the_Century_(chess)">Learn more</a>
+          </li>
+          <li>
+            <button class="play" data-game="kasparov_topalov">
+              <span class="triangle"></span>
+            </button>
+            Kasparov's Immortal: Kasparov&mdash;Topalov (1999)
+            <a href="https://www.essentiallysports.com/2016/01/kasparov-immortal/">Learn more</a>
+          </li>
+          <li>
+              <button class="reset" type="reset"><span></span></button>
+              <label class="auto_play">Auto-Play Speed</label><input class="speed" type="range">
+          </li>
+        </ul>
+      </header>
+      <section class="board"></section>
+      <ol class="log"></ol>
+    </section>
   </section>  <!-- end #game -->
 
   <section id="tool">
@@ -563,5 +602,20 @@
   </footer>
 </section>  <!-- end #resume -->
 <script src="scripts/checkers.js"></script>
+<script src="scripts/chess/utils.js"></script>
+<script src="scripts/chess/board.js"></script>
+<script src="scripts/chess/pieces.js"></script>
+<script src="scripts/chess/game.js"></script>
+<script src="scripts/chess/pawn.js"></script>
+<script src="scripts/chess/check.js"></script>
+<script src="scripts/chess/notation.js"></script>
+<script src="scripts/chess/ai.js"></script>
+<script src="scripts/chess/ui.js"></script>
+<script src="scripts/chess/promotion.js"></script>
+<script src="scripts/chess/castling.js"></script>
+<script src="scripts/chess/render.js"></script>
+<script src="scripts/chess/setup.js"></script>
+<script src="scripts/chess/parser.js"></script>
+<script src="scripts/chess/init.js"></script>
 </body>
 </html>
