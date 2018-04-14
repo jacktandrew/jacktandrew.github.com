@@ -1,4 +1,4 @@
-
+body { font-family: Helvetica, sans-serif; }
 section {clear: both;}
 section, .group:after {content: ""; display: table; clear: both;}
 section {width: 100%; border-bottom: 5px solid gray;}

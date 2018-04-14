@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Data Structures</title>
+  <link rel="stylesheet" type="text/css" href="./stylesheets/dataStructures.css">
+  <link rel="stylesheet" type="text/css" href="./stylesheets/zenburnesque.css">
+</head>
+<body>
+  <h1>Data Structures</h1>
+
+  <p>
+    A data structure is a way of organizing information for
+    purpose of reducing space, time and complexities of
+    performing action. On this page I've created examples
+    of common data structures using ES2015 classes.
+  </p>
+
+  <h2>Binary Tree</h2>
+  <pre class="BinaryTree"><code data-language="JavaScript">
+    class BinaryTree {
+      constructor(value) {
+        this.value = value;
+        this.left;
+        this.right;
+      }
+
+      insert(value) {
+        const leaf = new Leaf(value);
+        (value <= this.value)
+          ? (this.left) ? this.left.insert(value) : this.left = leaf
+          : (this.right) ? this.right.insert(value) : this.right = leaf;
+      }
+
+      contains(value) {
+        if (this.value === value) return true;
+
+        if (value < this.value)
+          return (this.left) ? this.left.contains(value) : false;
+        else
+          return (this.right) ? this.right.contains(value) : false;
+      }
+
+      remove(value, parent, dir) {
+        if (this.value === value) {
+          delete parent[dir]
+          return true;
+        }
+
+        if (value < this.value)
+          return (this.left) ? this.left.remove(value, this, 'left') : false;
+        else
+          return (this.right) ? this.right.remove(value, this, 'right') : false;
+      }
+
+      max() {
+        return (this.right) ? this.right.max() : this.value;
+      }
+
+      min() {
+        return (this.left) ? this.left.min() : this.value;
+      }
+    }
+  </code></pre>
+
+  <h2>Queue</h2>
+  <pre class="Queue"><code data-language="JavaScript">
+    class Queue {
+      enqueue(value) {
+        const last = Object.keys(this).pop() || 0,
+          next = parseInt(last) + 1;
+
+        this[next] = value;
+        return this;
+      }
+
+      dequeue() {
+        const key = Object.keys(this).shift(),
+          value = this[key];
+        delete this[key];
+        return value;
+      }
+    }
+  </code></pre>
+
+  <h2>Stack<h2>
+  <pre class="Stack"><code data-language="JavaScript">
+    class Stack {
+      push(value) {
+        const last = Object.keys(this).pop() || 0,
+          next = parseInt(last) + 1;
+
+        this[next] = value;
+        return this;
+      }
+
+      pop() {
+        const last = Object.keys(this).pop();
+        return this[last];
+      }
+    }
+  </code></pre>
+
+<script src="./js/lib/rainbow-custom.min.js"></script>
+</body>
+</html>
