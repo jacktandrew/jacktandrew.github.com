@@ -76,9 +76,6 @@ body {
 	font-family:"Helvetica Neue", Arial, Helvetica, sans-serif;
 }
 
-section:before, .group:before, section:after, .group:after {content:""; display:table;}
-section:after, .group:after {clear:both;}
-
 h1 {
 	font-size:24px;
 	font-weight:bold;
@@ -254,7 +251,7 @@ button {}
 button:hover, .green .purse {cursor: hand; border-style: inset;}
 .stats .keepers .die, .unavailable {opacity: .5; pointer-events: none; cursor: default;}
 .keepers, .score, .remaining, .cash_box div {border: 3px inset #FFFFAE;}
-#outer, #left_col, #right_col {float: left;}
+.threes .app { display: flex }
 #left_col, #right_col { height: 340px; padding: 10px;}
 #left_col, #right_col, #inner, #outer, button {-moz-user-select: -moz-none;  -khtml-user-select: none;  -webkit-user-select: none;  user-select: none;}
 
