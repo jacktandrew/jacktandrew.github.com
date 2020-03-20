@@ -53,7 +53,10 @@
 
 #chess .square * { pointer-events: none; }
 
-#chess .square .man { position: absolute; }
+#chess .square .man {
+  position: absolute;
+  left: 1rem;
+}
 
 #chess .man i {
   pointer-events: none;
