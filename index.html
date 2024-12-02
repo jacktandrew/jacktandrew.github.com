@@ -11,7 +11,6 @@
   <script src="scripts/libraries/jquery-ui-1.9.0.custom.min.js"></script>
   <script src="scripts/libraries/jquery-css-transform.js"></script>
   <script src="scripts/libraries/jquery-animate-css-rotate-scale.js"></script>
-
   <script src="scripts/libraries/modernizr.custom.js"></script>
   <script src="scripts/libraries/jquery.lightbox-0.5.min.js"></script>
   <script src="scripts/libraries/waypoints.min.js"></script>
@@ -23,7 +22,6 @@
   <script src="scripts/libraries/jquery.zclip.min.js"></script>
   <script src="scripts/libraries/coffee-script.js"></script>
   <script src="https://cdn.ravenjs.com/3.26.2/raven.min.js" crossorigin="anonymous"></script>
-
   <script src="scripts/threes.js"></script>
   <script src="scripts/tri.ko.js"></script>
   <script src="scripts/dominos.js"></script>
@@ -64,20 +62,38 @@
   <div id="main-nav-holder">
     <nav id="main-nav">
       <ul>
+        <li><a href="#contact">contact</a></li>
         <li><a href="#work">portfolio</a></li>
         <li><a href="#photos">photos</a></li>
         <li><a href="#code">code</a></li>
         <li><a href="#game">games</a></li>
         <li><a href="#tool">tools</a></li>
-        <li><a href="#contact">contact</a></li>
-        <li><a href="#resume">resume</a></li>
       </ul>
     </nav>
   </div>
 
+  <section id="contact">
+    <h1>Contact</h1>
+    <ul>
+      <li>Email:
+        <a href="mailTo:JackTAndrew@gmail.com" target="_blank">JackTAndrew@gmail.com</a>
+      </li>
+      <li>GitHub:
+        <a href="https://github.com/jacktandrew" target="_blank">https://github.com/jacktandrew</a>
+      </li>
+      <li>LinkedIn:
+        <a href="https://www.linkedin.com/in/jack-andrew-b188b620/" target="_blank">
+          https://www.linkedin.com/in/jack-andrew-b188b620/
+        </a>
+      </li>
+      <li>Resume:
+        <a href="Jack_T_Andrew_Resume.pdf" target="_blank">Download as PDF</a>
+      </li>
+    </ul>
+  </section>  <!-- end contact -->
 
   <section id="work">
-    <h1>Web Development</h1>
+    <h1>Portfolio</h1>
     <div class="squares">
       <div>
         <img src="images/p10.png" />
@@ -182,7 +198,17 @@
       <div class="text-square">
         <div></div>
         <p>
-          I first went to Haiti alone. I found out about a mission, contacted the director, and then just went. I was definitely a little reckless that first trip. I hitch-hiked from Santiago, DR to the border, crossed on foot, and then took public transport into the capitol. I got spooked when I saw the UN soldiers sitting in tanks, wearing body armor, with assault rifles slung over their shoulders. Meanwhile I couldn't speak the language, didn't know my way around, and was carrying around everything I owned. In the fear on my face the bus driver saw opportunity. I had previous said no to his offer of a $7 fee for him to go off his route and drive me to my hotel, this time when repeated the offer for $10, I jumped at the chance.
+          I first went to Haiti alone. I found out about a mission, contacted the
+          director, and then just went. I was definitely a little reckless that
+          first trip. I hitch-hiked from Santiago, DR to the border, crossed on
+          foot, and then took public transport into the capitol. I got spooked
+          when I saw the UN soldiers sitting in tanks, wearing body armor, with
+          assault rifles slung over their shoulders. Meanwhile I couldn't speak
+          the language, didn't know my way around, and was carrying around everything
+          I owned. In the fear on my face the bus driver saw opportunity. I had
+          previous said no to his offer of a $7 fee for him to go off his route
+          and drive me to my hotel, this time when repeated the offer for $10,
+          I jumped at the chance.
         </p>
       </div>
     </div>
@@ -216,7 +242,16 @@
       <div class="text-square">
         <div></div>
         <p>
-          Growing up I could see Mt. Rainier form my town. The icy summit looming above the clouds always filled me with awe and wonder. I dreamed about one day reaching the top but didn't know even where to begin. In 2002 I joined a church climbing group. At the time I was new to climbing with no real experience and no equipment. The group lead me up a couple mountains in the spring for preparation and by summer I was ready to join in the attempt on Mt. Rainer. I rented all my personal gear from REI and depended on my teammates to share their stove and tent. Although it was the toughest thing I had ever done I made it to the top and more importantly, I made it home safe.
+          Growing up I could see Mt. Rainier form my town. The icy summit looming
+          above the clouds always filled me with awe and wonder. I dreamed about
+          one day reaching the top but didn't know even where to begin. In 2002
+          I joined a church climbing group. At the time I was new to climbing with
+          no real experience and no equipment. The group lead me up a couple
+          mountains in the spring for preparation and by summer I was ready to
+          join in the attempt on Mt. Rainer. I rented all my personal gear from
+          REI and depended on my teammates to share their stove and tent. Although
+          it was the toughest thing I had ever done I made it to the top and more
+          importantly, I made it home safe.
         </p>
       </div>
     </div>
@@ -492,11 +527,36 @@
             <li>}</li></div> <!-- end div.triangle -->
           <div class="shadow">
             <li>.shadow {</li><div class="indent">
-              <li><label>-webkit-filter: drop-shadow(</label><span data-bind='text: shadowX'></span>px <span data-bind='text: shadowY'></span>px <span data-bind='text: shadowB'></span>px <span data-bind='text: shadowC'></span>);</li>
-              <li><label>-moz-filter: drop-shadow(</label><span data-bind='text: shadowX'></span>px <span data-bind='text: shadowY'></span>px <span data-bind='text: shadowB'></span>px <span data-bind='text: shadowC'></span>);</li>
-              <li><label>-o-filter: drop-shadow(</label><span data-bind='text: shadowX'></span>px <span data-bind='text: shadowY'></span>px <span data-bind='text: shadowB'></span>px <span data-bind='text: shadowC'></span>);</li>
-              <li><label>-filter: drop-shadow(</label><span data-bind='text: shadowX'></span>px <span data-bind='text: shadowY'></span>px <span data-bind='text: shadowB'></span>px <span data-bind='text: shadowC'></span>);</li></div> <!-- end .indent -->
-            <li>}</li></div> <!-- end div.shadow -->
+              <li>
+                <label>-webkit-filter: drop-shadow(</label>
+                <span data-bind='text: shadowX'></span>px
+                <span data-bind='text: shadowY'></span>px
+                <span data-bind='text: shadowB'></span>px
+                <span data-bind='text: shadowC'></span>);
+              </li>
+              <li>
+                <label>-moz-filter: drop-shadow(</label>
+                <span data-bind='text: shadowX'></span>px
+                <span data-bind='text: shadowY'></span>px
+                <span data-bind='text: shadowB'></span>px
+                <span data-bind='text: shadowC'></span>);
+              </li>
+              <li>
+                <label>-o-filter: drop-shadow(</label>
+                <span data-bind='text: shadowX'></span>px
+                <span data-bind='text: shadowY'></span>px
+                <span data-bind='text: shadowB'></span>px
+                <span data-bind='text: shadowC'></span>);
+              </li>
+              <li>
+                <label>-filter: drop-shadow(</label>
+                <span data-bind='text: shadowX'></span>px
+                <span data-bind='text: shadowY'></span>px
+                <span data-bind='text: shadowB'></span>px
+                <span data-bind='text: shadowC'></span>);
+              </li></div> <!-- end .indent -->
+            <li>}</li>
+          </div> <!-- end div.shadow -->
           <div class="border">
             <li>.border {</li><div class="indent">
               <li><label>position: </label><span>absolute</span>;</li>
@@ -520,75 +580,8 @@
               <li></li></ol></div>  <!-- end div#code -->
     </div>  <!-- end #tri_maker -->
   </section>
+</div>  <!-- end #wrapper -->
 
-  <section id="contact">
-    <h1>Contact</h1>
-    <ul>
-      <li>Email: <a href="mailTo:JackTAndrew@gmail.com">JackTAndrew@gmail.com</a></li>
-      <li>Skype: <a href="skype:jacktandrew?chat">jacktandrew</a></li>
-      <li>GitHub: <a href="https://github.com/jacktandrew">https://github.com/jacktandrew</a></li>
-    </ul>
-  </section>  <!-- end contact -->
-
-  <section id="resume">
-    <h1>Jack T. Andrew</h1>
-    <a href="Jack_T_Andrew_Resume.doc" class="download">Download as Word Document</a>
-    <h3>Work Experience</h3>
-
-    <h4>Web Development Engineer</h4>
-    <h5>
-      <span>Amazon</span>
-      <span>Seattle, WA</span>
-      <span>Apr. 2015 - Mar. 2020</span>
-    </h5>
-    <ul>
-      <li>Built user interfaces for external and internal sites</li>
-      <li>Updated Java controllers, models and tests</li>
-    </ul>
-
-    <h4>Design Technologist</h4>
-    <h5>
-      <span>Amazon</span>
-      <span>Seattle, WA</span>
-      <span>Nov. 2013 - Mar. 2015</span>
-    </h5>
-    <ul>
-      <li>Built Kindle landing page templates and campaigns</li>
-      <li>Made custom desktop landing page for the retail website</li>
-      <li>Wrote a suite of command line scripts and simple app to increase efficiency</li>
-      <li>Built a custom PhotoShop panel to automate steps in asset creation</li>
-    </ul>
-
-    <h4>Front End Developer</h4>
-    <h5>
-      <span>OneOcean</span>
-      <span>Seattle, WA</span>
-      <span>Mar. 2012 - Aug. 2012</span>
-    </h5>
-    <ul>
-      <li>Wrote Jasmine JS Unit Tests for an Angular JS web applications</li>
-    </ul>
-
-    <h3>Education</h3>
-    <h5>Bachelors of Arts and Science in Classical Studies</h5>
-    <h5>
-      <span>University of Washington</span>
-      <span>Seattle, WA</span>
-      <span>Jan. 2002 - Jun. 2003</span>
-    </h5>
-  </div>
-
-<!--
-  <footer>
-    <nav>
-      <ul>
-        <li><a class="top"  title="Back to top">Top</a></li>
-        <li><a class="down" title="Scroll down">Down</a></li>
-      </ul>
-    </nav>
-  </footer>
--->
-</section>  <!-- end #resume -->
 <script src="scripts/checkers.js"></script>
 <script src="scripts/chess/utils.js"></script>
 <script src="scripts/chess/board.js"></script>

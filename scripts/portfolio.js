@@ -12,19 +12,6 @@ $(document).ready(function() {
     event.stopPropagation();
   });
 
-  // Button that scrolls to the top
-  $('.top').click(function(){
-    event.preventDefault();
-    $("body").animate({ scrollTop: 0 }, 1500);
-  });
-
-  // Button that scrolls down a bit
-  $('.down').click(function(){
-    event.preventDefault();
-    var present = $("body").scrollTop()
-    $("body").animate({ scrollTop: present + 550 }, 1300);
-  });
-
   // Controls links to different parts of the page
   $('body').delegate('section', 'waypoint.reached', function(event, direction) {
    var $active = $(this);
@@ -42,7 +29,7 @@ $(document).ready(function() {
   });
 
   // Register each section as a waypoint.
-  $('section').waypoint({ offset: '50%' });
+  $('section').waypoint({ offset: '25%' });
 
   // Negates the flash of non-active nav.
   $('#main-nav a').click(function() {

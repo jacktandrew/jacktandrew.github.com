@@ -117,25 +117,25 @@ z-index: 5;
 }
 
 #main-nav ul {
-	width:900px;
-	margin-left:-20px;
-  padding-top: 2px;
-	height:25px;
-	text-align:center;
-	font-size:14px;
-	background:#333;
+	width: 900px;
+	margin-left: -20px;
+	padding: 10px;
+	text-align: center;
+	font-size: 18px;
+	background:#999;
 	color:#ddd;
 }
 
 #main-nav li {
-	display:inline-block;
-	border-left:1px solid #555;
-	width: 90px;
-	height: 20px;
-	vertical-align: bottom;
+	display: inline-block;
 }
 
-#main-nav li:first-child {
+#main-nav li a {
+	border-left: 1px solid #555;
+	padding: 5px 20px;
+}
+
+#main-nav li:first-child a {
 	border-left:0;
 }
 
@@ -404,17 +404,5 @@ div.bar {height:0px; width: 25px; margin: 0 3px;}
 .__cc {border-color: transparent transparent black black;}
 .c__c {border-color: black transparent transparent black;}
 
-
-
 #contact {margin: 10px 0px;}
 #contact li {list-style-type: none;}
-
-#resume .download {float: right; margin-top:-50px;}
-#resume h3 {font-size: 1.3em; margin: 20px 0px 10px; text-decoration: underline;}
-#resume h4 {font-size: 1.2em; margin: 15px 3px 8px;}
-#resume h5 {margin: 0px 20px;}
-#resume ul {margin: 10px 90px 20px 40px;}
-#resume li {list-style-type: disc;}
-#resume .circle {list-style-type: circle; margin-left: 20px;}
-#resume h5 span {display: inline-block; z-index: -1; width: 32%;}
-#resume .reference {margin-left: 50px; list-style-type: none;}
